@@ -7,25 +7,6 @@
 	3. Locale files must be named with language ID of language file (and converted to lowercase), e.g. en.json,
 	4. Locale files are ALWAYS used, regardless of whether the project is single language or multiple language.
 -->
-<locale>
-	<phrase id="locale" value=""/><!-- *** system locale for this language -->
-	<phrase id="use_system_locale" value="1"/><!-- *** change to "0" to disable system locale and use the following settings *** -->
-	<phrase id="decimal_point" value="."/>
-	<phrase id="thousands_sep" value=","/>
-	<phrase id="mon_decimal_point" value="."/>
-	<phrase id="mon_thousands_sep" value=","/>
-	<phrase id="currency_symbol" value="¥"/>
-	<phrase id="positive_sign" value=""/>
-	<phrase id="negative_sign" value="-"/>
-	<phrase id="frac_digits" value="2"/>
-	<phrase id="p_cs_precedes" value="1"/>
-	<phrase id="p_sep_by_space" value="0"/>
-	<phrase id="n_cs_precedes" value="1"/>
-	<phrase id="n_sep_by_space" value="0"/>
-	<phrase id="p_sign_posn" value="3"/>
-	<phrase id="n_sign_posn" value="3"/>
-	<phrase id="time_zone" value="Asia/Shanghai"/><!-- *** used for multi-language site only *** -->
-</locale>
 <global>
 	<phrase id="ActionDeleted" value="已删除"/>
 	<phrase id="ActionInserted" value="已插入"/>
