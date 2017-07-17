@@ -339,7 +339,7 @@
 	<phrase id="SequenceNumber" value="%s."/>
 	<phrase id="ServerCommunicationError" value="与服务器通讯时发生错误。"/><!-- v2017 -->
 	<phrase id="SessionWillExpire" value="本次会话将于 %s秒后终止，请点击“确定”以继续本次会话。" client="1"/><!-- v12 -->
-	<phrase id="SessionExpired" value="本次会已终止。" client="1"/><!-- v12 -->
+	<phrase id="SessionExpired" value="本次会话已终止。" client="1"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredBtn" value="设置密码有效期"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredSuccess" value="用户 '%u' 的密码已被设置为失效"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredFailure" value="无法将用户 '%u' 的密码设置为失效"/><!-- v12 -->
@@ -352,7 +352,7 @@
 	<phrase id="TblTypeCUSTOMVIEW" value="自定义审阅："/>
 	<phrase id="TblTypeREPORT" value="报表："/>
 	<phrase id="To" value="至"/>
-	<phrase id="Total" value="总和"/>
+	<phrase id="Total" value="总计"/>
 	<phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
 	<phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
 	<phrase id="UnauthorizedMasterUserID" value="当前用户 (%c) 无权插入记录。主过滤器: %f"/>

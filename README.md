@@ -7,7 +7,7 @@
 
 注：哥水平有限，如有错漏欢迎PR赐教，谢谢！
 
-***PHPMaker是e.World Technology Limited.的收费软件，如需购买该软件的授权许可，请前往其官网www.hkvstore.com。***
+***PHPMaker是e.World Technology Limited.的收费软件，如需购买该软件的授权许可，请前往其官网 hkvstore.com。***
 
 # PHPMaker v2017 Chinese Simplified xml file
 
