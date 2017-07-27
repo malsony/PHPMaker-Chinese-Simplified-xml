@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2017/06/14" version="13.0.0" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
-<!--
+<ew-language date="2017/07/27" version="14.0.0" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
+<!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
 	2. Locale settings are placed in a separate locale files under the "locales" folder,
@@ -104,6 +104,7 @@
 	<phrase id="DupIndex" value="值 '%v' 与唯一索引值 '%f'重复"/>
 	<phrase id="DupKey" value="重复的键值： '%f'"/>
 	<phrase id="Edit" value="编辑"/>
+	<phrase id="EditBtn" value="编辑" client="1"/><!-- v2018 -->
 	<phrase id="EditLink" value="编辑" class="icon-edit ewIcon"/><!-- v11 -->
 	<phrase id="EnterFilterName" value="输入筛选条件名称" client="1"/><!-- v12 -->
 	<phrase id="EnterNewPassword" value="请输入新密码" client="1"/>
@@ -135,6 +136,7 @@
 	<phrase id="ExactPhrase" value="精确查询"/>
 	<phrase id="ExceedMaxRetry" value="登录尝试次数超出限制，账号已被锁定，请 %t 分钟后再试。"/>
 	<phrase id="ExceedMaxEmailExport" value="导出电邮地址数量超出限制，请稍后再试。"/>
+	<phrase id="Exporting" value="正在导出，请稍候……" client="1"/><!-- v2018 -->
 	<phrase id="ExportToCsv" value="导出CSV文件" class="icon-csv ewIcon"/><!-- v11 -->
 	<phrase id="ExportToCsvText" value="导出CSV文件"/>
 	<phrase id="ExportToEmail" value="通过电邮导出" class="icon-email ewIcon"/><!-- v11 -->
@@ -149,6 +151,7 @@
 	<phrase id="ExportToWordText" value="导出Word文档"/>
 	<phrase id="ExportToXml" value="导出XML文档" class="icon-xml ewIcon"/><!-- v11 -->
 	<phrase id="ExportToXmlText" value="导出XML文档"/>
+	<phrase id="FailedToExport" value="无法导出" client="1"/><!-- v2018 -->
 	<phrase id="FailedToSendMail" value="电邮发送失败。"/>
 	<phrase id="FieldName" value="字段名"/>
 	<phrase id="FieldRequiredIndicator" value="&lt;span class=&quot;ewRequired&quot;&gt;&amp;nbsp;*&lt;/span&gt;"/>
@@ -159,6 +162,7 @@
 	<phrase id="OverwriteBtn" value="覆盖"/>
 	<phrase id="OverwriteLink" value="覆盖"/>
 	<phrase id="ForgotPwd" value="忘记密码"/>
+	<phrase id="GeneratePassword" value="生成密码" class="glyphicon glyphicon-flash ewIcon"/><!-- v12 -->	
 	<phrase id="GoBack" value="返回"/>
 	<phrase id="GridAddCancelled" value="多列添加已取消"/><!-- v11 -->
 	<phrase id="GridAddLink" value="多列添加" class="icon-grid-add ewIcon"/><!-- v11 -->
@@ -211,7 +215,11 @@
 	<phrase id="Loading" value="正在载入..." client="1"/>
 	<phrase id="Login" value="登入"/>
 	<phrase id="LoginCancelled" value="登入已取消"/>
+	<phrase id="LoginFacebook" value="使用Facebook ID登入"/><!-- v2018 -->
+	<phrase id="LoginFailed" value="无法使用 %p ID登入"/><!-- v2018 -->
+	<phrase id="LoginGoogle" value="使用Google ID登入"/><!-- v2018 -->
 	<phrase id="LoginOptions" value="选项"/><!-- v11 -->
+	<phrase id="LoginOr" value="- 或者 -"/><!-- v2018 -->
 	<phrase id="LoginPage" value="登入"/>
 	<phrase id="Logout" value="登出"/>
 	<phrase id="LookupLink" value="查找 - %s" class="glyphicon glyphicon-search ewIcon"/><!-- v2017 -->
@@ -226,10 +234,11 @@
 	<phrase id="MissingUserLevelID" value="缺失用户等级ID"/>
 	<phrase id="MissingUserLevelName" value="缺失用户等级名称"/>
 	<phrase id="MobileMenu" value="菜单"/>
+	<phrase id="More" value="更多" client="1"/><!-- v2018 -->
 	<phrase id="MultipleMasterDetails" value="主/从" class="icon-master-detail ewIcon"/><!-- v11 -->
 	<phrase id="New" value="新建"/>
 	<phrase id="NewPassword" value="新密码"/>
-	<phrase id="NewValue" value="New value"/><!-- v12 -->
+	<phrase id="NewValue" value="新建值"/><!-- v12 -->
 	<phrase id="Next" value="下一个"/>
 	<phrase id="NoAddRecord" value="没有记录被添加" client="1"/>
 	<phrase id="NoFieldSelected" value="没有字段被选择更新" client="1"/>
@@ -259,7 +268,6 @@
 	<phrase id="PasswordExpired" value="密码已过期，请重置密码。"/>
 	<phrase id="PasswordStrength" value="强度：%p" client="1"/><!-- v12 -->
 	<phrase id="PasswordTooSimple" value="密码强度太低" client="1"/><!-- v12 -->
-	<phrase id="GeneratePassword" value="生成密码" class="glyphicon glyphicon-flash ewIcon"/><!-- v12 -->
 	<phrase id="Permission" value="权限" class="icon-user ewIcon"/><!-- v11 -->
 	<phrase id="PermissionAddCopy" value="添加/复制"/>
 	<phrase id="PermissionDelete" value="删除"/>
@@ -307,6 +315,7 @@
 	<phrase id="Replace" value="替换"/>
 	<phrase id="Report" value="报表"/>
 	<phrase id="RequestPwdPage" value="密码请求"/>
+	<phrase id="RequestPwd" value="密码请求"/><!-- v2018 -->
 	<phrase id="Reset" value="重置"/>
 	<phrase id="ResendRegisterEmailBtn" value="重发激活电邮"/><!-- v12 -->
 	<phrase id="ResendRegisterEmailSuccess" value="用户 '%u' 的激活电邮已重发"/><!-- v12 -->
@@ -330,6 +339,7 @@
 	<phrase id="SaveCurrentFilter" value="保存当前筛选条件"/><!-- v12 -->
 	<phrase id="SaveUserName" value="记住用户名"/>
 	<phrase id="Search" value="搜索"/>
+	<phrase id="SearchBtn" value="搜索" client="1"/><!-- v2018 -->
 	<phrase id="SearchBtn" value="搜索" class="glyphicon glyphicon-search ewIcon"/><!-- v11 -->
 	<phrase id="SearchPanel" value="搜索面板"/><!-- v11 -->
 	<phrase id="SelectBtn" value="选择" client="1"/><!-- v2017 -->
@@ -339,7 +349,7 @@
 	<phrase id="SequenceNumber" value="%s."/>
 	<phrase id="ServerCommunicationError" value="与服务器通讯时发生错误。"/><!-- v2017 -->
 	<phrase id="SessionWillExpire" value="本次会话将于 %s秒后终止，请点击“确定”以继续本次会话。" client="1"/><!-- v12 -->
-	<phrase id="SessionExpired" value="本次会话已终止。" client="1"/><!-- v12 -->
+	<phrase id="SessionExpired" value="本次会已终止。" client="1"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredBtn" value="设置密码有效期"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredSuccess" value="用户 '%u' 的密码已被设置为失效"/><!-- v12 -->
 	<phrase id="SetPasswordExpiredFailure" value="无法将用户 '%u' 的密码设置为失效"/><!-- v12 -->
@@ -401,6 +411,7 @@
 	<phrase id="UserLevelNameIncorrect" value="自定义用户等级名称不可为'Administrator'或'Default'" client="1"/>
 	<phrase id="UserLoggedIn" value="用户'%u'已经登入！"/>
 	<phrase id="UserName" value="用户名"/>
+	<phrase id="UserNotFound" value="无法找到用户 '%u'"/><!-- v2018 -->
 	<phrase id="UserProfileCorrupted" value="用户信息错误，请登出后重新登入。"/>
 	<phrase id="ValueNotExist" value="值不存在" client="1"/><!-- v11 -->
 	<phrase id="View" value="查阅"/>

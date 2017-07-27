@@ -1,4 +1,4 @@
-# PHPMaker v2017 简体中文语言包
+# PHPMaker v2018 简体中文语言包
 
 ## 使用方法：
 1. 将`chinese.xml`文件复制到PHPMaker安装路径的`languages`目录下；
@@ -9,7 +9,7 @@
 
 ***PHPMaker是e.World Technology Limited.的收费软件，如需购买该软件的授权许可，请前往其官网 hkvstore.com。***
 
-# PHPMaker v2017 Chinese Simplified xml file
+# PHPMaker v2018 Chinese Simplified xml file
 
 ## Usage:
 1. Copy `chinese.xml` to the `languages` directory under installation path of PHPMaker;
