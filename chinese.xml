@@ -340,7 +340,7 @@
 	<phrase id="SaveUserName" value="记住用户名"/>
 	<phrase id="Search" value="搜索"/>
 	<phrase id="SearchBtn" value="搜索" client="1"/><!-- v2018 -->
-	<phrase id="SearchBtn" value="搜索" class="glyphicon glyphicon-search ewIcon"/><!-- v11 -->
+	<phrase id="SearchLink" value="搜索" class="glyphicon glyphicon-search ewIcon"/><!-- v11 -->
 	<phrase id="SearchPanel" value="搜索面板"/><!-- v11 -->
 	<phrase id="SelectBtn" value="选择" client="1"/><!-- v2017 -->
 	<phrase id="SendEmailBtn" value="发送"/>
