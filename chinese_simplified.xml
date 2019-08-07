@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2018/10/09" version="15.0.0.1" id="zh-cn" name="简体中文" desc="简体中文" author="Alex Lee">
+<ew-language date="2019/08/07" version="16.0.0" id="zh-cn" name="简体中文" desc="简体中文" author="Alex Lee">
 <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -25,6 +25,8 @@
 	<phrase id="AddSuccess" value="成功添加"/>
 	<phrase id="AdvancedSearch" value="高级搜索"/><!-- v11 -->
 	<phrase id="AdvancedSearchBtn" value="高级搜索" class="icon-advanced-search ew-icon"/><!-- v11 -->
+	<phrase id="AggregateColon" value=": "/><!-- v2020 (report) -->
+	<phrase id="AggregateEqual" value="="/><!-- v2020 (report) -->
 	<phrase id="AllRecords" value="所有"/>
 	<phrase id="AllWord" value="所有关键字"/>
 	<phrase id="AlwaysAsk" value="总是询问用户名和密码"/><!-- Deprecated since v2018 -->
@@ -50,6 +52,8 @@
 	<phrase id="BatchUpdateBegin" value="*** 批量更新开始 ***"/>
 	<phrase id="BatchUpdateRollback" value="*** 批量更新回滚 ***"/>
 	<phrase id="BatchUpdateSuccess" value="*** 批量更新成功 ***"/>
+	<phrase id="BooleanNo" value="No"/><!-- v2020 (report) -->
+	<phrase id="BooleanYes" value="Yes"/><!-- v2020 (report) -->
 	<phrase id="ButtonActions" value="操作" class="icon-options ew-icon"/><!-- v11 -->
 	<phrase id="ButtonAddEdit" value="添加/编辑" class="icon-addedit ew-icon"/><!-- v11 -->
 	<phrase id="ButtonDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
@@ -59,14 +63,20 @@
 	<phrase id="ButtonSearch" value="搜索" class="icon-search ew-icon"/><!-- v11 -->
 	<phrase id="CancelBtn" value="取消" client="1"/><!-- v2017 -->
 	<phrase id="CancelLink" value="取消" class="fa fa-times ew-icon"/><!-- v2019 -->
-	<phrase id="ChangePwd" value="更改密码"/>
+	<phrase id="ChangePwd" value="更改密码" client="1"/><!-- v2020 -->
 	<phrase id="ChangePwdMsg" value="更改密码"/><!-- v2019 -->
 	<phrase id="ChangePwdPage" value="更改密码"/>
 	<phrase id="ChangePwdBtn" value="更改"/>
+	<phrase id="ChartOrder" value="排序"/><!-- v2020 (report) -->
+	<phrase id="ChartOrderXAsc" value="标签升序"/><!-- v2020 (report) -->
+	<phrase id="ChartOrderXDesc" value="标签降序"/><!-- v2020 (report) -->
+	<phrase id="ChartOrderYAsc" value="值升序"/><!-- v2020 (report) -->
+	<phrase id="ChartOrderYDesc" value="值降序"/><!-- v2020 (report) -->
 	<phrase id="ChooseFileBtn" value="选择..."/><!-- v11 -->
 	<phrase id="ChooseFile" value="选择文件"/><!-- v11 -->
 	<phrase id="ChooseFiles" value="选择文件"/><!-- v11 -->
 	<phrase id="ClickReCaptcha" value="请点击reCAPTCHA" client="1"/><!-- v12 -->
+	<phrase id="ClickToDrillDown" value="点击钻取"/><!-- v2020 (report) -->
 	<phrase id="CloseAccountBtn" value="删除数据并关闭我的账号"/><!-- v2019 -->
 	<phrase id="CloseBtn" value="关闭" client="1"/><!-- v2017 -->
 	<phrase id="Confirm" value="确定"/>
@@ -79,12 +89,15 @@
 	<phrase id="CopyLink" value="复制" class="icon-copy ew-icon"/><!-- v11 -->
 	<phrase id="Count" value="计数"/>
 	<phrase id="CountSelected" value="%s 已选定" client="1"/><!-- v12 -->
+	<phrase id="CtbSumHead" value="摘要"/><!-- v2020 (report) -->
+	<phrase id="CurrentFilters" value="当前筛选条件："/><!-- v2020 (report) -->
 	<phrase id="CurrentPassword" value="当前密码：" client="1"/><!-- v12 -->
 	<phrase id="CustomActionCompleted" value="操作 '%s' 已完成"/>
 	<phrase id="CustomActionCancelled" value="操作 '%s' 已取消"/>
 	<phrase id="CustomActionFailed" value="'%s' 已失败"/><!-- v12 -->
 	<phrase id="CustomActionNotAllowed" value="不允许 '%s'"/><!-- v12 -->
 	<phrase id="CustomView" value="自定义查阅"/>
+	<phrase id="Danger" value="错误" client="1"/><!-- v2020 -->
 	<phrase id="Delete" value="删除"/>
 	<phrase id="DeleteBtn" value="确认删除"/>
 	<phrase id="DeleteCancelled" value="删除已取消"/>
@@ -97,6 +110,8 @@
 	<phrase id="DetailLink" value=""/>
 	<phrase id="DetailCount" value="&lt;span class='badge badge-info ew-detail-count%c'&gt;%c&lt;/span&gt;"/><!-- v2019 -->
 	<phrase id="DownloadBtn" value="下载"/><!-- v2019 -->
+	<phrase id="DrillDownAllRecords" value="所有记录"/><!-- v2020 (report) -->
+	<phrase id="DrillDownFilters" value="钻取条件："/><!-- v2020 (report) -->
 	<phrase id="DupIndex" value="值 '%v' 与唯一索引值 '%f'重复"/>
 	<phrase id="DupKey" value="重复的主键值：'%f'"/>
 	<phrase id="Edit" value="编辑"/>
@@ -127,13 +142,18 @@
 	<phrase id="EmailFormContentType" value="电邮格式"/>
 	<phrase id="EmailFormContentTypeUrl" value="链接"/>
 	<phrase id="EmailFormContentTypeHtml" value="网页"/>
+	<phrase id="EmptyLabel" value="(空)"/><!-- v2020 (report) -->
 	<phrase id="EnterUid" value="请输入用户ID" client="1"/>
 	<phrase id="EnterValidEmail" value="请输入有效电邮地址！" client="1"/>
 	<phrase id="ExactPhrase" value="精确查询"/>
 	<phrase id="ExceedMaxRetry" value="登录尝试次数超出限制，账号已被锁定，请 %t 分钟后再试。"/>
 	<phrase id="ExceedMaxEmailExport" value="导出电邮地址数量超出限制，请稍后再试。"/>
+	<phrase id="ExportChart" value="正在导出图表：" client="1"/><!-- v2020 (report) -->
+	<phrase id="ExportChartData" value="正在导出图表数据" client="1"/><!-- v2020 (report) -->
+	<phrase id="ExportChartError" value="无法导出图表：" client="1"/><!-- v2020 (report) -->
 	<phrase id="ExportClassNotFound" value="无法找到导出类"/><!-- v2019 -->
 	<phrase id="Exporting" value="正在导出，请稍候……" client="1"/><!-- v2018 -->
+	<phrase id="ExportingChart" value="正在导出图表 (%t 中的 %c)，请稍候……" client="1"/><!-- v2020 (report) -->
 	<phrase id="ExportToCsv" value="导出CSV文件" class="icon-csv ew-icon"/><!-- v11 -->
 	<phrase id="ExportToCsvText" value="导出CSV文件"/>
 	<phrase id="ExportToEmail" value="通过电邮导出" class="icon-email ew-icon"/><!-- v11 -->
@@ -152,12 +172,12 @@
 	<phrase id="FailedToSendMail" value="电邮发送失败。"/>
 	<phrase id="FieldName" value="字段名"/>
 	<phrase id="FieldRequiredIndicator" class="fa fa-asterisk ew-required"/><!-- v2019 -->
-	<phrase id="FileNotFound" value="文件未找到"/><!-- * characters need to be supported by TEMP_IMAGE_FONT * -->
+	<phrase id="FileNotFound" value="文件未找到"/>
 	<phrase id="Filter" value="筛选条件"/><!-- v12 -->
 	<phrase id="FilterName" value="筛选条件名称" client="1"/><!-- v12 -->
 	<phrase id="Filters" value="筛选条件" class="icon-filter ew-icon"/><!-- v12 -->
 	<phrase id="ForgotPasswordResponse" value="如果电邮地址填写无误，您将收到重置密码的指示。"/><!-- v2019 -->
-	<phrase id="ForgotPwd" value="忘记密码"/>
+	<phrase id="ForgotPwd" value="忘记密码" client="1"/><!-- v2020 -->
 	<phrase id="GeneratePassword" value="生成密码" class="fa fa-bolt ew-icon"/><!-- v2019 -->
 	<phrase id="GoBack" value="返回"/>
 	<phrase id="GridAddCancelled" value="多列添加已取消"/><!-- v11 -->
@@ -167,6 +187,8 @@
 	<phrase id="GridEditLink" value="多列编辑" class="icon-grid-edit ew-icon"/><!-- v11 -->
 	<phrase id="GridInsertLink" value="添加" class="fa fa-check ew-icon"/><!-- v2019 -->
 	<phrase id="GridSaveLink" value="保存" class="fa fa-check ew-icon"/><!-- v2019 -->
+	<phrase id="Group" value="Groups"/><!-- v2020 (report) --><!-- todo -->
+	<phrase id="GroupsPerPage" value="Groups per page"/><!-- v2020 (report) --><!-- todo -->
 	<phrase id="Highlight" value="高亮"/><!-- v11 -->
 	<phrase id="HighlightBtn" value="高亮" class="icon-highlight ew-icon"/><!-- v11 -->
 	<phrase id="HomePage" value="首页" class="fa fa-home ew-icon"/><!-- v2019 -->
@@ -204,11 +226,12 @@
 	<phrase id="IncorrectGUID" value="错误的GUID" client="1"/>
 	<phrase id="IncorrectInteger" value="错误的整数" client="1"/>
 	<phrase id="IncorrectPhone" value="错误的电话号码" client="1"/>
-	<phrase id="IncorrectRegExp" value="正则表达式不匹配" client="1"/>
 	<phrase id="IncorrectRange" value="数字必须介于 %1 和 %2" client="1"/>
+	<phrase id="IncorrectRegExp" value="正则表达式不匹配" client="1"/>
 	<phrase id="IncorrectSSN" value="错误的社会保险号" client="1"/>
 	<phrase id="IncorrectTime" value="错误的时间格式(hh:mm:ss)" client="1"/>
 	<phrase id="IncorrectZip" value="错误的邮编" client="1"/>
+	<phrase id="Info" value="信息" client="1"/><!-- v2020 -->
 	<phrase id="InlineAddLink" value="快速添加" class="icon-inline-add ew-icon"/><!-- v11 -->
 	<phrase id="InlineCopyLink" value="快速复制" class="icon-inline-copy ew-icon"/><!-- v11 -->
 	<phrase id="InlineEditLink" value="快速编辑" class="icon-inline-edit ew-icon"/><!-- v11 -->
@@ -235,15 +258,15 @@
 	<phrase id="LightboxClose" value="关闭" client="1"/><!-- v11 -->
 	<phrase id="LightboxXhrError" value="无法加载本内容。" client="1"/><!-- v11 -->
 	<phrase id="LightboxImgError" value="无法加载本图像。" client="1"/><!-- v11 -->
-	<phrase id="List" value="列表"/>
+	<phrase id="List" value=""/><!-- v2019 -->
 	<phrase id="ListActionButton" value="操作" class="icon-user ew-icon"/><!-- v12 -->
 	<phrase id="Loading" value="正在载入..." client="1"/>
-	<phrase id="Login" value="登入"/>
+	<phrase id="Login" value="登入" client="1"/><!-- v2020 -->
 	<phrase id="LoginCancelled" value="登入已取消"/>
 	<phrase id="LoginFacebook" value="使用Facebook ID登入"/><!-- v2018 -->
 	<phrase id="LoginFailed" value="无法使用 %p ID登入"/><!-- v2018 -->
 	<phrase id="LoginGoogle" value="使用Google ID登入"/><!-- v2018 -->
-	<phrase id="LoginMsg" value="请先登入再开始会话"/><!-- v2019 -->
+	<phrase id="LoginMsg" value="请登入"/><!-- v2019 -->
 	<phrase id="LoginOptions" value="选项"/><!-- v11 -->
 	<phrase id="LoginOr" value="- 或者 -"/><!-- v2018 -->
 	<phrase id="LoginPage" value="登入"/>
@@ -261,9 +284,22 @@
 	<phrase id="MissingLookupTableName" value="查找表格名称缺失"/>
 	<phrase id="MissingDisplayFieldName" value="缺失字段标题名称"/>
 	<phrase id="MissingDisplayFieldValue" value="缺失显示字段值"/>
+	<phrase id="MissingPDFObject" value="缺失PDFObject" client="1"/><!-- v2020 -->
 	<phrase id="MissingUserLevelID" value="缺失用户等级ID"/>
 	<phrase id="MissingUserLevelName" value="缺失用户等级名称"/>
 	<phrase id="MobileMenu" value="菜单"/>
+	<phrase id="MonthJan" value="一月"/><!-- v2020 (report) -->
+	<phrase id="MonthFeb" value="二月"/><!-- v2020 (report) -->
+	<phrase id="MonthMar" value="三月"/><!-- v2020 (report) -->
+	<phrase id="MonthApr" value="四月"/><!-- v2020 (report) -->
+	<phrase id="MonthMay" value="五月"/><!-- v2020 (report) -->
+	<phrase id="MonthJun" value="六月"/><!-- v2020 (report) -->
+	<phrase id="MonthJul" value="七月"/><!-- v2020 (report) -->
+	<phrase id="MonthAug" value="八月"/><!-- v2020 (report) -->
+	<phrase id="MonthSep" value="九月"/><!-- v2020 (report) -->
+	<phrase id="MonthOct" value="十月"/><!-- v2020 (report) -->
+	<phrase id="MonthNov" value="十一月"/><!-- v2020 (report) -->
+	<phrase id="MonthDec" value="十二月"/><!-- v2020 (report) -->
 	<phrase id="More" value="更多" client="1"/><!-- v2018 -->
 	<phrase id="MultipleMasterDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
 	<phrase id="New" value="新建"/>
@@ -272,16 +308,20 @@
 	<phrase id="Next" value="下一个" client="1"/><!-- v12 -->
 	<phrase id="NoAddRecord" value="没有记录被添加" client="1"/>
 	<phrase id="NoFieldSelected" value="没有字段被选择更新" client="1"/>
-	<phrase id="NoPermission" value="您没有权限读取本页。"/>
+	<phrase id="NoPermission" value="您没有权限读取 %s。"/><!-- v12.0.6 -->
 	<phrase id="NoAddPermission" value="您没有权限添加记录。"/>
+	<phrase id="NoChartData" value="无数据显示" client="1"/><!-- v2020 -->
 	<phrase id="NoDeletePermission" value="您没有权限删除记录。"/>
+	<phrase id="NoDistinctColVals" value="No distinct column values for SQL: "/><!-- v2020 (report) -->
 	<phrase id="NoEditPermission" value="您没有权限编辑记录。"/>
 	<phrase id="Noon" value="中午"/><!-- v2017 -->
-	<phrase id="NoRecord" value="没有记录返回"/>
+	<phrase id="NoRecord" value="没有记录返回" client="1"/><!-- v2017 -->
 	<phrase id="NoRecordForKey" value="无法找到记录匹配关键值 = "/>
+	<phrase id="NoReportOrCharts" value="没有本页面的报告或图表。"/><!-- v2020 (report) -->
 	<phrase id="NoRecordSelected" value="没有记录被选择" client="1"/>
 	<phrase id="NoTableGenerated" value="未生成表"/>
 	<phrase id="NoUserLevel" value="没有用户级别设置。"/>
+	<phrase id="NullLabel" value="(Null)"/><!-- v2020 (report) -->
 	<phrase id="Of" value="共计" client="1"/><!-- v2017 -->
 	<phrase id="Old" value="旧"/>
 	<phrase id="OldPassword" value="旧密码"/>
@@ -301,12 +341,14 @@
 	<phrase id="PasswordStrength" value="强度：%p" client="1"/><!-- v12 -->
 	<phrase id="PasswordTooSimple" value="密码强度太低" client="1"/><!-- v12 -->
 	<phrase id="Permission" value="权限" class="icon-user ew-icon"/><!-- v11 -->
-	<phrase id="PermissionAddCopy" value="添加/复制" client="1"/><!-- v2018 -->
+	<phrase id="PermissionAdd" value="添加/复制" client="1"/><!-- v2020 -->
 	<phrase id="PermissionAdmin" value="管理员" client="1"/><!-- v2019 -->
 	<phrase id="PermissionDelete" value="删除" client="1"/><!-- v2018 -->
 	<phrase id="PermissionEdit" value="编辑" client="1"/><!-- v2018 -->
+	<phrase id="PermissionImport" value="导入" client="1"/><!-- v2020 -->
 	<phrase id="PermissionListSearchView" value="列表/搜索/查阅" client="1"/><!-- v2018 -->
 	<phrase id="PermissionList" value="列表" client="1"/><!-- v2018 -->
+	<phrase id="PermissionLookup" value="查找" client="1"/><!-- v2020 -->
 	<phrase id="PermissionSearch" value="搜索" client="1"/><!-- v2018 -->
 	<phrase id="PermissionView" value="查阅" client="1"/><!-- v2018 -->
 	<phrase id="PersonalDataBtn" value="个人数据"/><!-- v2019 -->
@@ -324,6 +366,10 @@
 	<phrase id="PrinterFriendlyText" value="打印机友好页面"/>
 	<phrase id="PrivacyPolicy" value="隐私权保护政策"/><!-- v2019 -->
 	<phrase id="PrivacyPolicyContent" value="在本页面设置“隐私权保护政策”"/><!-- v2019 -->
+	<phrase id="Qtr1" value="第一季度"/><!-- v2020 (report) -->
+	<phrase id="Qtr2" value="第二季度"/><!-- v2020 (report) -->
+	<phrase id="Qtr3" value="第三季度"/><!-- v2020 (report) -->
+	<phrase id="Qtr4" value="第四季度"/><!-- v2020 (report) -->
 	<phrase id="QuickSearch" value="快速搜索"/>
 	<phrase id="QuickSearchBtn" value="给我搜！"/>
 	<phrase id="QuickSearchAuto" value="自动" client="1"/><!-- v11 -->
@@ -340,7 +386,7 @@
 	<phrase id="RecordInserted" value="个记录已插入"/>
 	<phrase id="RecordUpdated" value="个记录已更新"/>
 	<phrase id="RecordsPerPage" value="每页显示记录数量" client="1"/><!-- v2017 -->
-	<phrase id="Register" value="注册"/>
+	<phrase id="Register" value="注册" client="1"/><!-- v2020 -->
 	<phrase id="RegisterBtn" value="注册"/>
 	<phrase id="RegisterSuccess" value="注册成功"/>
 	<phrase id="RegisterSuccessActivate" value="注册成功。激活电邮已经发送到您的邮箱，请到邮箱中点击激活链接来激活您的帐号。"/>
@@ -353,13 +399,14 @@
 	<phrase id="Remove" value="删除"/>
 	<phrase id="Replace" value="替换"/>
 	<phrase id="Report" value="报表"/>
-	<phrase id="RequestPwd" value="请求重置密码"/><!-- v2018 -->
-	<phrase id="RequestPwdMsg" value="重置密码"/><!-- v2019 -->
+	<phrase id="ResetPwd" value="重置密码"/><!-- v2020 -->
+	<phrase id="ResetPwdMsg" value="重置密码"/><!-- v2020 -->
+	<phrase id="ResendRegisterEmailBtn" value="Resend registration email"/><!-- v12 -->
+	<phrase id="ResendRegisterEmailSuccess" value="Registration email for user '%u' has been re-sent"/><!-- v12 -->
+	<phrase id="ResendRegisterEmailFailure" value="Failed to re-send register email for user '%u' has failed"/><!-- v12 -->
 	<phrase id="Reset" value="重置"/>
-	<phrase id="ResendRegisterEmailBtn" value="重发激活电邮"/><!-- v12 -->
-	<phrase id="ResendRegisterEmailSuccess" value="用户 '%u' 的激活电邮已重发"/><!-- v12 -->
-	<phrase id="ResendRegisterEmailFailure" value="无法重发用户 '%u' 的激活电邮"/><!-- v12 -->
-	<phrase id="ResetConcurrentUserBtn" value="重置当前用户会话"/><!-- v12 -->
+	<phrase id="ResetAllFilter" value="重置所有筛选条件" class="icon-reset-search ew-icon"/><!-- v2020 (report) -->
+	<phrase id="ResetConcurrentUserBtn" value="重置并发用户会话"/><!-- v12 -->
 	<phrase id="ResetConcurrentUserSuccess" value="用户 '%u' 的会话已被重置"/><!-- v12 -->
 	<phrase id="ResetConcurrentUserFailure" value="无法重置用户 '%u'的会话"/><!-- v12 -->
 	<phrase id="ResetLoginRetryBtn" value="重置登入失败次数"/><!-- v12 -->
@@ -367,13 +414,15 @@
 	<phrase id="ResetLoginRetryFailure" value="无法为用户 '%u' 重置登入失败次数"/><!-- v12 -->
 	<phrase id="ResetSearchBtn" value="重置" class="icon-reset-search ewIcon"/><!-- v11 -->
 	<phrase id="ResetSearch" value="重置"/>
-	<phrase id="RptAvg" value="平均"/>
-	<phrase id="RptDtlRec" value="详细记录"/>
-	<phrase id="RptGrandTotal" value="总计"/>
-	<phrase id="RptMax" value="最大"/>
-	<phrase id="RptMin" value="最小"/>
-	<phrase id="RptSum" value="合计"/>
-	<phrase id="RptSumHead" value="摘要"/>
+	<phrase id="RptAvg" value="平均"/><!-- v2020 (report) -->
+	<phrase id="RptCnt" value="计数"/><!-- v2020 (report) -->
+	<phrase id="RptDtlRec" value="详细记录"/><!-- v2020 (report) -->
+	<phrase id="RptGrandSummary" value="Grand Summary"/><!-- v2020 (report) --><!-- todo -->
+	<phrase id="RptMax" value="最大"/><!-- v2020 (report) -->
+	<phrase id="RptMin" value="最小"/><!-- v2020 (report) -->
+	<phrase id="RptPageSummary" value="Page Summary"/><!-- v2020 (report) --><!-- todo -->
+	<phrase id="RptSum" value="合计"/><!-- v2020 (report) -->
+	<phrase id="RptSumHead" value="%c: %v 摘要"/><!-- v2020 (report) -->
 	<phrase id="SaveBtn" value="保存" client="1"/><!-- v2018 -->
 	<phrase id="SaveCurrentFilter" value="保存当前筛选条件"/><!-- v12 -->
 	<phrase id="SaveUserName" value="记住用户名"/><!-- Deprecated since v2018 -->
@@ -384,7 +433,7 @@
 	<phrase id="SelectBtn" value="选择" client="1"/><!-- v2017 -->
 	<phrase id="SendEmailBtn" value="发送"/>
 	<phrase id="SendEmailSuccess" value="电邮成功发送" client="1"/>
-	<phrase id="SendPwd" value="发送密码"/>
+	<phrase id="SendPwd" value="发送密码" client="1"/><!-- v2020 -->
 	<phrase id="SequenceNumber" value="%s."/>
 	<phrase id="ServerCommunicationError" value="与服务器通讯时发生错误。"/><!-- v2017 -->
 	<phrase id="SessionWillExpire" value="本次会话将于 %s秒后终止，请点击“确定”以继续本次会话。" client="1"/><!-- v12 -->
@@ -395,13 +444,18 @@
 	<phrase id="ShowAllBtn" value="显示所有记录" class="icon-reset-search ew-icon"/><!-- v11 -->
 	<phrase id="ShowAll" value="显示所有记录"/><!-- v11 -->
 	<phrase id="SrchLegend" value=""/>
+	<phrase id="Success" value="成功" client="1"/><!-- v2020 -->
+	<phrase id="Summary" value="摘要"/><!-- v2020 (report) -->
+	<phrase id="SummaryColon" value=": "/><!-- v2020 (report) -->
 	<phrase id="Table" value="表"/>
 	<phrase id="TableOrView" value="表" client="1"/><!-- v2018 -->
+	<phrase id="Tasks" value="任务"/><!-- v2020 (report) -->
 	<phrase id="TblTypeTABLE" value="表："/>
 	<phrase id="TblTypeVIEW" value="审阅："/>
 	<phrase id="TblTypeCUSTOMVIEW" value="自定义审阅："/>
 	<phrase id="TblTypeREPORT" value="报表："/>
 	<phrase id="To" value="至"/>
+	<phrase id="Top" value="Top"/><!-- v2020 (report) --><!-- todo -->
 	<phrase id="Total" value="总计"/>
 	<phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
 	<phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
@@ -462,8 +516,11 @@
 	<phrase id="ViewPageDeleteLink" value="删除" class="fa fa-trash ew-icon"/><!-- v2019 -->
 	<phrase id="ViewPageDetailLink" value=""/>
 	<phrase id="ViewPageEditLink" value="编辑" class="icon-edit ew-icon"/><!-- v11 -->
+	<phrase id="Warning" value="警告" client="1"/><!-- v2020 -->
+	<phrase id="Week" value="周"/><!-- v2020 (report) -->
 	<phrase id="WrongFileType" value="本文件格式不可上传。" client="1"/>
-	<phrase id="=" value="等于"/>
+	<phrase id="Year" value="年"/><!-- v2020 (report) -->
+	<phrase id="=" value="&amp;nbsp;"/><!-- v12 -->
 	<phrase id="EQUAL" value="="/><!-- v12 -->
 	<phrase id="&lt;&gt;" value="&amp;lt;&amp;gt;"/>
 	<phrase id="&lt;" value="&amp;lt;"/>
@@ -481,5 +538,37 @@
 	<phrase id="OR" value="或"/>
 	<phrase id="AM" value="上午"/><!-- v2017 -->
 	<phrase id="PM" value="下午"/><!-- v2017 -->
+<!-- Menu Prefix/Suffix (v2020 (report)) -->
+	<phrase id="SimpleReportMenuItemPrefix" value=""/>
+	<phrase id="SimpleReportMenuItemSuffix" value=""/>
+	<phrase id="DetailSummaryReportMenuItemPrefix" value=""/>
+	<phrase id="DetailSummaryReportMenuItemSuffix" value=""/>
+	<phrase id="CrosstabReportMenuItemPrefix" value=""/>
+	<phrase id="CrosstabReportMenuItemSuffix" value=""/>
+	<phrase id="ChartReportMenuItemPrefix" value=""/>
+	<phrase id="ChartReportMenuItemSuffix" value=""/>
+<!-- Advanced Filter (v2020 (report)) -->
+	<phrase id="Future" value="未来"/>
+	<phrase id="Past" value="过去"/>
+	<phrase id="Last14Days" value="前 14 天"/>
+	<phrase id="Last30Days" value="前 30 天"/>
+	<phrase id="Last7Days" value="前 7 天"/>
+	<phrase id="Next14Days" value="未来 14 天"/>
+	<phrase id="Next30Days" value="未来 30 天"/>
+	<phrase id="Next7Days" value="未来 7 天"/>
+	<phrase id="Today" value="今天"/>
+	<phrase id="Tomorrow" value="明天"/>
+	<phrase id="Yesterday" value="昨天"/>
+	<phrase id="LastMonth" value="上月"/>
+	<phrase id="NextMonth" value="下月"/>
+	<phrase id="ThisMonth" value="本月"/>
+	<phrase id="LastTwoWeeks" value="过去两周"/>
+	<phrase id="LastWeek" value="上周"/>
+	<phrase id="NextTwoWeeks" value="未来两周"/>
+	<phrase id="NextWeek" value="下周"/>
+	<phrase id="ThisWeek" value="本周"/>
+	<phrase id="LastYear" value="去年"/>
+	<phrase id="NextYear" value="明年"/>
+	<phrase id="ThisYear" value="今年"/>
 </global>
 </ew-language>
