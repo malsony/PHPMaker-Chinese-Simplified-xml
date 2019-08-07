@@ -1,7 +1,7 @@
-# PHPMaker v2019 简体中文语言包
+# PHPMaker v2020 简体中文语言包
 
 ## 使用方法：
-1. 将`chinese.xml`文件复制到PHPMaker安装路径的`languages`目录下；
+1. 将`chinese_simplified.xml`文件复制到PHPMaker安装路径的`languages`目录下；
 2. 重新启动PHPMaker，在PHP标签的`Default Language`中选择`简体中文`；
 3. 完美！
 
@@ -9,10 +9,10 @@
 
 ***PHPMaker是e.World Technology Limited.的收费软件，如需购买该软件的授权许可，请前往其官网 hkvstore.com。***
 
-# PHPMaker v2019 Chinese Simplified xml file
+# PHPMaker v2020 Chinese Simplified xml file
 
 ## Usage:
-1. Copy `chinese.xml` to the `languages` directory under installation path of PHPMaker;
+1. Copy `chinese_simplified.xml` to the `languages` directory under installation path of PHPMaker;
 2. Restart PHPMaker, then choose `简体中文` in the PHP tab;
 3. See how your project rocks!
 
