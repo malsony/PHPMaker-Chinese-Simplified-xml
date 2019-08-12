@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2019/08/07" version="16.0.0" id="zh-cn" name="简体中文" desc="简体中文" author="Alex Lee">
+<ew-language date="2019/08/07" version="16.0.0" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
 <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -417,10 +417,10 @@
 	<phrase id="RptAvg" value="平均"/><!-- v2020 (report) -->
 	<phrase id="RptCnt" value="计数"/><!-- v2020 (report) -->
 	<phrase id="RptDtlRec" value="详细记录"/><!-- v2020 (report) -->
-	<phrase id="RptGrandSummary" value="Grand Summary"/><!-- v2020 (report) --><!-- todo -->
+	<phrase id="RptGrandSummary" value="总计"/><!-- v2020 (report) -->
 	<phrase id="RptMax" value="最大"/><!-- v2020 (report) -->
 	<phrase id="RptMin" value="最小"/><!-- v2020 (report) -->
-	<phrase id="RptPageSummary" value="Page Summary"/><!-- v2020 (report) --><!-- todo -->
+	<phrase id="RptPageSummary" value="本页小计"/><!-- v2020 (report) -->
 	<phrase id="RptSum" value="合计"/><!-- v2020 (report) -->
 	<phrase id="RptSumHead" value="%c: %v 摘要"/><!-- v2020 (report) -->
 	<phrase id="SaveBtn" value="保存" client="1"/><!-- v2018 -->
@@ -456,7 +456,7 @@
 	<phrase id="TblTypeREPORT" value="报表："/>
 	<phrase id="To" value="至"/>
 	<phrase id="Top" value="Top"/><!-- v2020 (report) --><!-- todo -->
-	<phrase id="Total" value="总计"/>
+	<phrase id="Total" value="合计"/>
 	<phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
 	<phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
 	<phrase id="UnauthorizedMasterUserID" value="当前用户 (%c) 无权插入记录。主过滤器: %f"/>
