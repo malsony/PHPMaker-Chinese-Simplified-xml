@@ -7,7 +7,7 @@
 
 注：译者水平有限，如有错漏欢迎PR赐教或提Issue，谢谢！
 
-***PHPMaker是e.World Technology Limited.的收费软件，如需购买该软件的授权许可，请前往其官网 hkvstore.com。***
+***PHPMaker是e.World Technology Limited.的收费软件，如需试用软件或购买该软件的授权许可，请前往其官网 hkvstore.com。***
 
 # PHPMaker v2020 Chinese Simplified xml file
 
@@ -18,4 +18,4 @@
 
 Remarks: feel free to fork this file and submit bug fixing or anything else, thank you!
 
-***PHPMaker is a paid software by e.World Technology Limited., please go to their official website hkvstore.com to purchase a license.***
+***PHPMaker is a paid software by e.World Technology Limited., for more details about trial or license purchase, please go to their official website hkvstore.com.***
