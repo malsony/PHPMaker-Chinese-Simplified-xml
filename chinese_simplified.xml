@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2019/08/07" version="16.0.0" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
+<ew-language date="2019/09/04" version="16.0.1" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
 <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -259,7 +259,7 @@
 	<phrase id="LightboxXhrError" value="无法加载本内容。" client="1"/><!-- v11 -->
 	<phrase id="LightboxImgError" value="无法加载本图像。" client="1"/><!-- v11 -->
 	<phrase id="List" value=""/><!-- v2019 -->
-	<phrase id="ListActionButton" value="操作" class="icon-user ew-icon"/><!-- v12 -->
+	<phrase id="ListActionButton" value="操作" class="fas fa-ellipsis-v"/><!-- v2020 -->
 	<phrase id="Loading" value="正在载入..." client="1"/>
 	<phrase id="Login" value="登入" client="1"/><!-- v2020 -->
 	<phrase id="LoginCancelled" value="登入已取消"/>
