@@ -1,574 +1,614 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2019/09/04" version="16.0.1" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
-<!-- 
-	*** Important Notes:
-	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
-	2. Locale settings are placed in a separate locale files under the "locales" folder,
-	3. Locale files must be named with language ID of language file (and converted to lowercase), e.g. en.json,
-	4. Locale files are ALWAYS used, regardless of whether the project is single language or multiple language.
+<?xml version="1.0"?>
+<ew-language version="18.12.0" id="zh-CN" name="简体中文" desc="简体中文" author="Alex Lee">
+<!--
+    IMPORTANT NOTES:
+    1. Language ID must be RFC 4646 language tags (which use hyphen, not underscore), e.g. en-US, fr-CA, fr-FR,
+    2. Requires PHP Internationalization extension (Intl), see https://www.php.net/manual/en/book.intl.php,
+    3. Locale files are NOT used unless you save customized settings of a locale in the project.
 -->
 <global>
-	<phrase id="Accept" value="接受"/><!-- v2019 -->
-	<phrase id="ActionDeleted" value="已删除"/>
-	<phrase id="ActionInserted" value="已插入"/>
-	<phrase id="ActionInsertedGridAdd" value="多列插入成功"/>
-	<phrase id="ActionUpdated" value="已更新"/>
-	<phrase id="ActionUpdatedGridEdit" value="多列编辑成功"/>
-	<phrase id="ActionUpdatedMultiUpdate" value="多列更新成功"/>
-	<phrase id="ActivateAccount" value="帐号已成功激活"/>
-	<phrase id="ActivateFailed" value="激活失败"/>
-	<phrase id="Add" value="添加"/>
-	<phrase id="AddBlankRow" value="添加空白行" class="fa fa-plus ew-icon"/><!-- v2019 -->
-	<phrase id="AddBtn" value="添加" client="1"/><!-- v2018 -->
-	<phrase id="AddLink" value="添加" class="fa fa-plus ew-icon"/><!-- v2019 -->
-	<phrase id="AddMasterDetailLink" value="添加主/从表格" class="icon-md-add ew-icon"/><!-- v11 -->
-	<phrase id="AddSuccess" value="成功添加"/>
-	<phrase id="AdvancedSearch" value="高级搜索"/><!-- v11 -->
-	<phrase id="AdvancedSearchBtn" value="高级搜索" class="icon-advanced-search ew-icon"/><!-- v11 -->
-	<phrase id="AggregateColon" value=": "/><!-- v2020 (report) -->
-	<phrase id="AggregateEqual" value="="/><!-- v2020 (report) -->
-	<phrase id="AllRecords" value="所有"/>
-	<phrase id="AllWord" value="所有关键字"/>
-	<phrase id="AlwaysAsk" value="总是询问用户名和密码"/><!-- Deprecated since v2018 -->
-	<phrase id="AnyWord" value="任意关键字"/>
-	<phrase id="AuditTrailAutoLogin" value="自动登入"/>
-	<phrase id="AuditTrailFailedAttempt" value="失败的尝试次数：%n"/>
-	<phrase id="AuditTrailUserLoggedIn" value="用户已登入"/>
-	<phrase id="AuditTrailPasswordExpired" value="密码已过期"/>
-	<phrase id="AuditTrailLogin" value="登入"/>
-	<phrase id="AuditTrailLogout" value="登出"/>
-	<phrase id="AutoLogin" value="自动登入"/><!-- Deprecated since v2018 -->
-	<phrase id="AutoLoginFailed" value="自动登入失败"/><!-- v2018 -->
-	<phrase id="Average" value="平均"/>
-	<phrase id="BackToList" value="返回列表"/>
-	<phrase id="BackToLogin" value="返回到登入页"/>
-	<phrase id="BackToMasterRecordPage" value="返回主列表页面"/>
-	<phrase id="BatchDeleteBegin" value="*** 批量删除开始 ***"/>
-	<phrase id="BatchDeleteRollback" value="*** 批量删除回滚 ***"/>
-	<phrase id="BatchDeleteSuccess" value="*** 批量删除成功 ***"/>
-	<phrase id="BatchInsertBegin" value="*** 批量插入开始 ***"/>
-	<phrase id="BatchInsertRollback" value="*** 批量插入回滚 ***"/>
-	<phrase id="BatchInsertSuccess" value="*** 批量插入成功 ***"/>
-	<phrase id="BatchUpdateBegin" value="*** 批量更新开始 ***"/>
-	<phrase id="BatchUpdateRollback" value="*** 批量更新回滚 ***"/>
-	<phrase id="BatchUpdateSuccess" value="*** 批量更新成功 ***"/>
-	<phrase id="BooleanNo" value="No"/><!-- v2020 (report) -->
-	<phrase id="BooleanYes" value="Yes"/><!-- v2020 (report) -->
-	<phrase id="ButtonActions" value="操作" class="icon-options ew-icon"/><!-- v11 -->
-	<phrase id="ButtonAddEdit" value="添加/编辑" class="icon-addedit ew-icon"/><!-- v11 -->
-	<phrase id="ButtonDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
-	<phrase id="ButtonExport" value="导出" class="fa fa-download ew-icon"/><!-- v2019 -->
-	<phrase id="ButtonImport" value="导入" class="fa fa-upload ew-icon"/><!-- v2019 -->
-	<phrase id="ButtonListOptions" value="选项" class="icon-options ew-icon"/><!-- v11 -->
-	<phrase id="ButtonSearch" value="搜索" class="icon-search ew-icon"/><!-- v11 -->
-	<phrase id="CancelBtn" value="取消" client="1"/><!-- v2017 -->
-	<phrase id="CancelLink" value="取消" class="fa fa-times ew-icon"/><!-- v2019 -->
-	<phrase id="ChangePwd" value="更改密码" client="1"/><!-- v2020 -->
-	<phrase id="ChangePwdMsg" value="更改密码"/><!-- v2019 -->
-	<phrase id="ChangePwdPage" value="更改密码"/>
-	<phrase id="ChangePwdBtn" value="更改"/>
-	<phrase id="ChartOrder" value="排序"/><!-- v2020 (report) -->
-	<phrase id="ChartOrderXAsc" value="标签升序"/><!-- v2020 (report) -->
-	<phrase id="ChartOrderXDesc" value="标签降序"/><!-- v2020 (report) -->
-	<phrase id="ChartOrderYAsc" value="值升序"/><!-- v2020 (report) -->
-	<phrase id="ChartOrderYDesc" value="值降序"/><!-- v2020 (report) -->
-	<phrase id="ChooseFileBtn" value="选择..."/><!-- v11 -->
-	<phrase id="ChooseFile" value="选择文件"/><!-- v11 -->
-	<phrase id="ChooseFiles" value="选择文件"/><!-- v11 -->
-	<phrase id="ClickReCaptcha" value="请点击reCAPTCHA" client="1"/><!-- v12 -->
-	<phrase id="ClickToDrillDown" value="点击钻取"/><!-- v2020 (report) -->
-	<phrase id="CloseAccountBtn" value="删除数据并关闭我的账号"/><!-- v2019 -->
-	<phrase id="CloseBtn" value="关闭" client="1"/><!-- v2017 -->
-	<phrase id="Confirm" value="确定"/>
-	<phrase id="ConfirmBtn" value="确认提交" client="1"/><!-- v2017 -->
-	<phrase id="ConfirmCancel" value="确认取消？" client="1"/><!-- v12 -->
-	<phrase id="ConfirmPassword" value="确认更改密码"/>
-	<phrase id="ConflictCancelLink" value="取消"/>
-	<phrase id="CookieConsentSummary" value="在这里制定本站的私隐和Cookie使用政策。"/><!-- v2019 -->
-	<phrase id="Copy" value="复制"/>
-	<phrase id="CopyLink" value="复制" class="icon-copy ew-icon"/><!-- v11 -->
-	<phrase id="Count" value="计数"/>
-	<phrase id="CountSelected" value="%s 已选定" client="1"/><!-- v12 -->
-	<phrase id="CtbSumHead" value="摘要"/><!-- v2020 (report) -->
-	<phrase id="CurrentFilters" value="当前筛选条件："/><!-- v2020 (report) -->
-	<phrase id="CurrentPassword" value="当前密码：" client="1"/><!-- v12 -->
-	<phrase id="CustomActionCompleted" value="操作 '%s' 已完成"/>
-	<phrase id="CustomActionCancelled" value="操作 '%s' 已取消"/>
-	<phrase id="CustomActionFailed" value="'%s' 已失败"/><!-- v12 -->
-	<phrase id="CustomActionNotAllowed" value="不允许 '%s'"/><!-- v12 -->
-	<phrase id="CustomView" value="自定义查阅"/>
-	<phrase id="Danger" value="错误" client="1"/><!-- v2020 -->
-	<phrase id="Delete" value="删除"/>
-	<phrase id="DeleteBtn" value="确认删除"/>
-	<phrase id="DeleteCancelled" value="删除已取消"/>
-	<phrase id="DeleteConfirmMsg" value="你确认要删除该记录吗？" client="1"/>
-	<phrase id="DeleteFilter" value="删除筛选条件"/><!-- v12 -->
-	<phrase id="DeleteFilterConfirm" value="确认删除筛选条件 %s？" client="1"/><!-- v12 -->
-	<phrase id="DeleteLink" value="删除" class="fa fa-trash ew-icon"/><!-- v2019 -->
-	<phrase id="DeleteSelectedLink" value="删除所选记录" class="fa fa-trash ew-icon"/><!-- v2019 -->
-	<phrase id="DeleteSuccess" value="删除成功"/>
-	<phrase id="DetailLink" value=""/>
-	<phrase id="DetailCount" value="&lt;span class='badge badge-info ew-detail-count%c'&gt;%c&lt;/span&gt;"/><!-- v2019 -->
-	<phrase id="DownloadBtn" value="下载"/><!-- v2019 -->
-	<phrase id="DrillDownAllRecords" value="所有记录"/><!-- v2020 (report) -->
-	<phrase id="DrillDownFilters" value="钻取条件："/><!-- v2020 (report) -->
-	<phrase id="DupIndex" value="值 '%v' 与唯一索引值 '%f'重复"/>
-	<phrase id="DupKey" value="重复的主键值：'%f'"/>
-	<phrase id="Edit" value="编辑"/>
-	<phrase id="EditBtn" value="编辑" client="1"/><!-- v2018 -->
-	<phrase id="EditLink" value="编辑" class="icon-edit ew-icon"/><!-- v11 -->
-	<phrase id="EnterFilterName" value="输入筛选条件名称" client="1"/><!-- v12 -->
-	<phrase id="EnterNewPassword" value="请输入新密码" client="1"/>
-	<phrase id="EnterOldPassword" value="请输入旧密码" client="1"/>
-	<phrase id="EnterPassword" value="请输入密码" client="1"/>
-	<phrase id="EnterPwd" value="请输入密码" client="1"/>
-	<phrase id="EnterRequiredField" value="请输入必填字段 - %s"/><!-- v11 -->
-	<phrase id="EnterSearchCriteria" value="请输入查询规则"/>
-	<phrase id="EnterUserName" value="请输入用户名" client="1"/>
-	<phrase id="EnterValidateCode" value="请输入验证码" client="1"/><!-- v11 -->
-	<phrase id="EnterSenderEmail" value="请输入发件人电邮地址" client="1"/>
-	<phrase id="EnterProperSenderEmail" value="发件人电邮数量超出限制或电邮地址不正确" client="1"/>
-	<phrase id="EnterRecipientEmail" value="请输入收件人电邮地址" client="1"/>
-	<phrase id="EnterProperRecipientEmail" value="收件人数量超出限制或电邮地址不正确" client="1"/>
-	<phrase id="EnterProperCcEmail" value="抄送人数量超出限制或电子邮件地址不正确" client="1"/>
-	<phrase id="EnterProperBccEmail" value="密送人数量超出限制或电子邮件地址不正确" client="1"/>
-	<phrase id="EnterSubject" value="请输入主题" client="1"/>
-	<phrase id="EmailFormSender" value="发件人"/>
-	<phrase id="EmailFormRecipient" value="收件人"/>
-	<phrase id="EmailFormCc" value="抄送人"/>
-	<phrase id="EmailFormBcc" value="密送人"/>
-	<phrase id="EmailFormSubject" value="主题"/>
-	<phrase id="EmailFormMessage" value="正文"/>
-	<phrase id="EmailFormContentType" value="电邮格式"/>
-	<phrase id="EmailFormContentTypeUrl" value="链接"/>
-	<phrase id="EmailFormContentTypeHtml" value="网页"/>
-	<phrase id="EmptyLabel" value="(空)"/><!-- v2020 (report) -->
-	<phrase id="EnterUid" value="请输入用户ID" client="1"/>
-	<phrase id="EnterValidEmail" value="请输入有效电邮地址！" client="1"/>
-	<phrase id="ExactPhrase" value="精确查询"/>
-	<phrase id="ExceedMaxRetry" value="登录尝试次数超出限制，账号已被锁定，请 %t 分钟后再试。"/>
-	<phrase id="ExceedMaxEmailExport" value="导出电邮地址数量超出限制，请稍后再试。"/>
-	<phrase id="ExportChart" value="正在导出图表：" client="1"/><!-- v2020 (report) -->
-	<phrase id="ExportChartData" value="正在导出图表数据" client="1"/><!-- v2020 (report) -->
-	<phrase id="ExportChartError" value="无法导出图表：" client="1"/><!-- v2020 (report) -->
-	<phrase id="ExportClassNotFound" value="无法找到导出类"/><!-- v2019 -->
-	<phrase id="Exporting" value="正在导出，请稍候……" client="1"/><!-- v2018 -->
-	<phrase id="ExportingChart" value="正在导出图表 (%t 中的 %c)，请稍候……" client="1"/><!-- v2020 (report) -->
-	<phrase id="ExportToCsv" value="导出CSV文件" class="icon-csv ew-icon"/><!-- v11 -->
-	<phrase id="ExportToCsvText" value="导出CSV文件"/>
-	<phrase id="ExportToEmail" value="通过电邮导出" class="icon-email ew-icon"/><!-- v11 -->
-	<phrase id="ExportToEmailText" value="通过电邮导出" client="1"/>
-	<phrase id="ExportToExcel" value="导出Excel文档" class="icon-excel ew-icon"/><!-- v11 -->
-	<phrase id="ExportToExcelText" value="导出Excel文档"/>
-	<phrase id="ExportToHtml" value="导出HTML文档" class="icon-html ew-icon"/><!-- v11 -->
-	<phrase id="ExportToHtmlText" value="导出HTML文档"/>
-	<phrase id="ExportToPDF" value="导出PDF文档" class="icon-pdf ew-icon"/><!-- v11 -->
-	<phrase id="ExportToPDFText" value="导出PDF文档"/>
-	<phrase id="ExportToWord" value="导出Word文档" class="icon-word ew-icon"/><!-- v11 -->
-	<phrase id="ExportToWordText" value="导出Word文档"/>
-	<phrase id="ExportToXml" value="导出XML文档" class="icon-xml ew-icon"/><!-- v11 -->
-	<phrase id="ExportToXmlText" value="导出XML文档"/>
-	<phrase id="FailedToExport" value="无法导出" client="1"/><!-- v2018 -->
-	<phrase id="FailedToSendMail" value="电邮发送失败。"/>
-	<phrase id="FieldName" value="字段名"/>
-	<phrase id="FieldRequiredIndicator" class="fa fa-asterisk ew-required"/><!-- v2019 -->
-	<phrase id="FileNotFound" value="文件未找到"/>
-	<phrase id="Filter" value="筛选条件"/><!-- v12 -->
-	<phrase id="FilterName" value="筛选条件名称" client="1"/><!-- v12 -->
-	<phrase id="Filters" value="筛选条件" class="icon-filter ew-icon"/><!-- v12 -->
-	<phrase id="ForgotPasswordResponse" value="如果电邮地址填写无误，您将收到重置密码的指示。"/><!-- v2019 -->
-	<phrase id="ForgotPwd" value="忘记密码" client="1"/><!-- v2020 -->
-	<phrase id="GeneratePassword" value="生成密码" class="fa fa-bolt ew-icon"/><!-- v2019 -->
-	<phrase id="GoBack" value="返回"/>
-	<phrase id="GridAddCancelled" value="多列添加已取消"/><!-- v11 -->
-	<phrase id="GridAddLink" value="多列添加" class="icon-grid-add ew-icon"/><!-- v11 -->
-	<phrase id="GridCancelLink" value="取消" class="fa fa-times ew-icon"/><!-- v2019 -->
-	<phrase id="GridEditCancelled" value="多列编辑已取消"/><!-- v11 -->
-	<phrase id="GridEditLink" value="多列编辑" class="icon-grid-edit ew-icon"/><!-- v11 -->
-	<phrase id="GridInsertLink" value="添加" class="fa fa-check ew-icon"/><!-- v2019 -->
-	<phrase id="GridSaveLink" value="保存" class="fa fa-check ew-icon"/><!-- v2019 -->
-	<phrase id="Group" value="Groups"/><!-- v2020 (report) --><!-- todo -->
-	<phrase id="GroupsPerPage" value="Groups per page"/><!-- v2020 (report) --><!-- todo -->
-	<phrase id="Highlight" value="高亮"/><!-- v11 -->
-	<phrase id="HighlightBtn" value="高亮" class="icon-highlight ew-icon"/><!-- v11 -->
-	<phrase id="HomePage" value="首页" class="fa fa-home ew-icon"/><!-- v2019 -->
-	<phrase id="Import" value="导入" class="fa fa-upload ew-icon"/><!-- v2019 -->
-	<phrase id="ImportBtn" value="导入"/><!-- v2019 -->
-	<phrase id="ImportMessageError1" value="已从 %f 成功导入 %t 中的 %c 个记录（成功导入 %s 个，失败 %e 个）" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageError2" value="，错误： %e 个" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageError3" value="行 %i ： %d " client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageError4" value="记录文件： %l" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageInvalidFileExtension" value="无效的文件格式 '%e'"/><!-- v2019 -->
-	<phrase id="ImportMessageInvalidFieldName" value="无效的文件名： %f"/><!-- v2019 -->
-	<phrase id="ImportMessageInvalidFieldValue" value="无效的值（字段名： %f）： %v"/><!-- v2019 -->
-	<phrase id="ImportMessageMore" value="(%s more)" client="1"/><!-- v2019 --><!-- todo -->
-	<phrase id="ImportMessageNoHeaderRow" value="无法找到表头导入"/><!-- v2019 -->
-	<phrase id="ImportMessageProgress" value="正在从 %f 中导入 %t 个记录中的 %c 个……" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageServerError" value="服务器错误 %s: %t" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageSuccess" value="成功从 %f 中导入 %t 个记录中的 %c 个" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageUploadError" value="无法上传 %f ： %s " client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageUploadComplete" value="上传完成" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageUploadProgress" value="正在上传……(p%)" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessagePleaseSelect" value="请选择文件" client="1"/><!-- v2019 -->
-	<phrase id="ImportMessageIncorrectFileType" value="错误的文件类型" client="1"/><!-- v2019 -->
-	<phrase id="ImportText" value="导入" client="1"/><!-- v2019 -->
-	<phrase id="IncorrectCreditCard" value="错误的信用卡号"/>
-	<phrase id="IncorrectDate" value="错误的日期 (%s)"/>
-	<phrase id="IncorrectDateYMD" value="错误的日期格式，应为yyyy%smm%sdd"/>
-	<phrase id="IncorrectDateMDY" value="错误的日期格式，应为mm%sdd%syyyy"/>
-	<phrase id="IncorrectDateDMY" value="错误的日期格式，应为dd%smm%syyyy"/>
-	<phrase id="IncorrectShortDateYMD" value="错误的日期格式，应为yy%smm%sdd"/>
-	<phrase id="IncorrectShortDateMDY" value="错误的日期格式，应为mm%sdd%syy"/>
-	<phrase id="IncorrectShortDateDMY" value="错误的日期格式，应为dd%smm%syy"/>
-	<phrase id="IncorrectEmail" value="错误的电邮" client="1"/>
-	<phrase id="IncorrectField" value="错误的字段" client="1"/>
-	<phrase id="IncorrectFloat" value="错误的浮点数字" client="1"/>
-	<phrase id="IncorrectGUID" value="错误的GUID" client="1"/>
-	<phrase id="IncorrectInteger" value="错误的整数" client="1"/>
-	<phrase id="IncorrectPhone" value="错误的电话号码" client="1"/>
-	<phrase id="IncorrectRange" value="数字必须介于 %1 和 %2" client="1"/>
-	<phrase id="IncorrectRegExp" value="正则表达式不匹配" client="1"/>
-	<phrase id="IncorrectSSN" value="错误的社会保险号" client="1"/>
-	<phrase id="IncorrectTime" value="错误的时间格式(hh:mm:ss)" client="1"/>
-	<phrase id="IncorrectZip" value="错误的邮编" client="1"/>
-	<phrase id="Info" value="信息" client="1"/><!-- v2020 -->
-	<phrase id="InlineAddLink" value="快速添加" class="icon-inline-add ew-icon"/><!-- v11 -->
-	<phrase id="InlineCopyLink" value="快速复制" class="icon-inline-copy ew-icon"/><!-- v11 -->
-	<phrase id="InlineEditLink" value="快速编辑" class="icon-inline-edit ew-icon"/><!-- v11 -->
-	<phrase id="InsertCancelled" value="添加已取消"/>
-	<phrase id="InsertFailed" value="添加失败" client="1"/>
-	<phrase id="InsertLink" value="添加" class="fa fa-check ew-icon"/><!-- v2019 -->
-	<phrase id="InsertSuccess" value="成功添加"/>
-	<phrase id="InvalidEmail" value="无效的电子邮件"/>
-	<phrase id="InvalidField" value="无效字段"/>
-	<phrase id="InvalidKeyValue" value="无效的键值"/>
-	<phrase id="InvalidRecord" value="无效的记录！主键为空" client="1"/>
-	<phrase id="InvalidPostRequest" value="无效的提交请求"/><!-- v11 -->
-	<phrase id="InvalidParameter" value="无效的参数"/>
-	<phrase id="InvalidPassword" value="无效的密码"/>
-	<phrase id="InvalidNewPassword" value="无效的新密码"/>
-	<phrase id="InvalidUidPwd" value="不正确的用户名或密码"/>
-	<phrase id="Keep" value="保持"/>
-	<phrase id="Language" value="语言"/>
-	<phrase id="LearnMore" value="了解更多"/><!-- v2019 -->
-	<phrase id="LightboxTitle" value=" " client="1"/><!-- v11 -->
-	<phrase id="LightboxCurrent" value="图像数 {current} / {total}" client="1"/><!-- Note: DO NOT translate "{current}" and "{total}" --><!-- v11 -->
-	<phrase id="LightboxPrevious" value="上一个" client="1"/><!-- v11 -->
-	<phrase id="LightboxNext" value="下一个" client="1"/><!-- v11 -->
-	<phrase id="LightboxClose" value="关闭" client="1"/><!-- v11 -->
-	<phrase id="LightboxXhrError" value="无法加载本内容。" client="1"/><!-- v11 -->
-	<phrase id="LightboxImgError" value="无法加载本图像。" client="1"/><!-- v11 -->
-	<phrase id="List" value=""/><!-- v2019 -->
-	<phrase id="ListActionButton" value="操作" class="fas fa-ellipsis-v"/><!-- v2020 -->
-	<phrase id="Loading" value="正在载入..." client="1"/>
-	<phrase id="Login" value="登入" client="1"/><!-- v2020 -->
-	<phrase id="LoginCancelled" value="登入已取消"/>
-	<phrase id="LoginFacebook" value="使用Facebook ID登入"/><!-- v2018 -->
-	<phrase id="LoginFailed" value="无法使用 %p ID登入"/><!-- v2018 -->
-	<phrase id="LoginGoogle" value="使用Google ID登入"/><!-- v2018 -->
-	<phrase id="LoginMsg" value="请登入"/><!-- v2019 -->
-	<phrase id="LoginOptions" value="选项"/><!-- v11 -->
-	<phrase id="LoginOr" value="- 或者 -"/><!-- v2018 -->
-	<phrase id="LoginPage" value="登入"/>
-	<phrase id="Logout" value="登出"/>
-	<phrase id="LookupLink" value="查找 - %s" class="fa fa-search ew-icon"/><!-- v2019 -->
-	<phrase id="MasterDetailCopyLink" value="主/从 复制" class="icon-md-copy ew-icon"/><!-- v11 -->
-	<phrase id="MasterDetailEditLink" value="主/从 编辑" class="icon-md-edit ew-icon"/><!-- v11 -->
-	<phrase id="MasterDetailListLink" value="主/从 列表" class="icon-table ew-icon"/><!-- v11 -->
-	<phrase id="MasterDetailViewLink" value="主/从 查阅" class="icon-md-view ew-icon"/><!-- v11 -->
-	<phrase id="MasterRecord" value="主表记录："/>
-	<phrase id="MaxFileSize" value="超出文件大小限制（%s 字节）。" client="1"/>
-	<phrase id="MessageOK" value="确定" client="1"/>
-	<phrase id="Midnight" value="午夜"/><!-- v2017 -->
-	<phrase id="MismatchPassword" value="密码不匹配" client="1"/>
-	<phrase id="MissingLookupTableName" value="查找表格名称缺失"/>
-	<phrase id="MissingDisplayFieldName" value="缺失字段标题名称"/>
-	<phrase id="MissingDisplayFieldValue" value="缺失显示字段值"/>
-	<phrase id="MissingPDFObject" value="缺失PDFObject" client="1"/><!-- v2020 -->
-	<phrase id="MissingUserLevelID" value="缺失用户等级ID"/>
-	<phrase id="MissingUserLevelName" value="缺失用户等级名称"/>
-	<phrase id="MobileMenu" value="菜单"/>
-	<phrase id="MonthJan" value="一月"/><!-- v2020 (report) -->
-	<phrase id="MonthFeb" value="二月"/><!-- v2020 (report) -->
-	<phrase id="MonthMar" value="三月"/><!-- v2020 (report) -->
-	<phrase id="MonthApr" value="四月"/><!-- v2020 (report) -->
-	<phrase id="MonthMay" value="五月"/><!-- v2020 (report) -->
-	<phrase id="MonthJun" value="六月"/><!-- v2020 (report) -->
-	<phrase id="MonthJul" value="七月"/><!-- v2020 (report) -->
-	<phrase id="MonthAug" value="八月"/><!-- v2020 (report) -->
-	<phrase id="MonthSep" value="九月"/><!-- v2020 (report) -->
-	<phrase id="MonthOct" value="十月"/><!-- v2020 (report) -->
-	<phrase id="MonthNov" value="十一月"/><!-- v2020 (report) -->
-	<phrase id="MonthDec" value="十二月"/><!-- v2020 (report) -->
-	<phrase id="More" value="更多" client="1"/><!-- v2018 -->
-	<phrase id="MultipleMasterDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
-	<phrase id="New" value="新建"/>
-	<phrase id="NewPassword" value="新密码"/>
-	<phrase id="NewValue" value="新建值"/><!-- v12 -->
-	<phrase id="Next" value="下一个" client="1"/><!-- v12 -->
-	<phrase id="NoAddRecord" value="没有记录被添加" client="1"/>
-	<phrase id="NoFieldSelected" value="没有字段被选择更新" client="1"/>
-	<phrase id="NoPermission" value="您没有权限读取 %s。"/><!-- v12.0.6 -->
-	<phrase id="NoAddPermission" value="您没有权限添加记录。"/>
-	<phrase id="NoChartData" value="无数据显示" client="1"/><!-- v2020 -->
-	<phrase id="NoDeletePermission" value="您没有权限删除记录。"/>
-	<phrase id="NoDistinctColVals" value="No distinct column values for SQL: "/><!-- v2020 (report) -->
-	<phrase id="NoEditPermission" value="您没有权限编辑记录。"/>
-	<phrase id="Noon" value="中午"/><!-- v2017 -->
-	<phrase id="NoRecord" value="没有记录返回" client="1"/><!-- v2017 -->
-	<phrase id="NoRecordForKey" value="无法找到记录匹配关键值 = "/>
-	<phrase id="NoReportOrCharts" value="没有本页面的报告或图表。"/><!-- v2020 (report) -->
-	<phrase id="NoRecordSelected" value="没有记录被选择" client="1"/>
-	<phrase id="NoTableGenerated" value="未生成表"/>
-	<phrase id="NoUserLevel" value="没有用户级别设置。"/>
-	<phrase id="NullLabel" value="(Null)"/><!-- v2020 (report) -->
-	<phrase id="Of" value="共计" client="1"/><!-- v2017 -->
-	<phrase id="Old" value="旧"/>
-	<phrase id="OldPassword" value="旧密码"/>
-	<phrase id="OptionAlreadyExist" value="选项已存在"/>
-	<phrase id="OverwriteBtn" value="覆盖" client="1"/><!-- v2017 -->
-	<phrase id="OverwriteLink" value="覆盖"/>
-	<phrase id="Page" value="页码" client="1"/><!-- v2017 -->
-	<phrase id="PagerFirst" value="第一页"/>
-	<phrase id="PagerLast" value="最后一页"/>
-	<phrase id="PagerNext" value="下一页"/>
-	<phrase id="PagerPrevious" value="前一页"/>
-	<phrase id="Password" value="密码"/>
-	<phrase id="PasswordMask" value="********"/><!-- v12 -->
-	<phrase id="PasswordRequest" value="密码请求"/>
-	<phrase id="PasswordChanged" value="密码已更改"/>
-	<phrase id="PasswordExpired" value="密码已过期，请重置密码。"/>
-	<phrase id="PasswordStrength" value="强度：%p" client="1"/><!-- v12 -->
-	<phrase id="PasswordTooSimple" value="密码强度太低" client="1"/><!-- v12 -->
-	<phrase id="Permission" value="权限" class="icon-user ew-icon"/><!-- v11 -->
-	<phrase id="PermissionAdd" value="添加/复制" client="1"/><!-- v2020 -->
-	<phrase id="PermissionAdmin" value="管理员" client="1"/><!-- v2019 -->
-	<phrase id="PermissionDelete" value="删除" client="1"/><!-- v2018 -->
-	<phrase id="PermissionEdit" value="编辑" client="1"/><!-- v2018 -->
-	<phrase id="PermissionImport" value="导入" client="1"/><!-- v2020 -->
-	<phrase id="PermissionListSearchView" value="列表/搜索/查阅" client="1"/><!-- v2018 -->
-	<phrase id="PermissionList" value="列表" client="1"/><!-- v2018 -->
-	<phrase id="PermissionLookup" value="查找" client="1"/><!-- v2020 -->
-	<phrase id="PermissionSearch" value="搜索" client="1"/><!-- v2018 -->
-	<phrase id="PermissionView" value="查阅" client="1"/><!-- v2018 -->
-	<phrase id="PersonalDataBtn" value="个人数据"/><!-- v2019 -->
-	<phrase id="PersonalDataContent" value="您的账户包含了提供给本站的数据。您可以在本页面下载或删除这些数据。"/><!-- v2019 -->
-	<phrase id="PersonalDataDeleteFailure" value="删除用户过程中遇到未知错误"/><!-- v2019 -->
-	<phrase id="PersonalDataDeleteSuccess" value="成功删除个人数据！"/><!-- v2019 -->
-	<phrase id="PersonalDataTitle" value="个人数据"/><!-- v2019 -->
-	<phrase id="PersonalDataWarning" value="删除这些数据将永久清除您的账户，并且将无法复原。"/><!-- v2019 -->
-	<phrase id="PickDate" value="选择日期"/>
-	<phrase id="PleaseSelect" value="请选择" client="1"/><!-- v12 -->
-	<phrase id="PleaseWait" value="请稍候……（就是“稍等”的意思，不是“稍后”哦！）" client="1"/>
-	<phrase id="Prev" value="上一个" client="1"/><!-- v12 -->
-	<phrase id="PrimaryKeyUnspecified" value="未指定主键"/>
-	<phrase id="PrinterFriendly" value="打印机友好页面" class="icon-print ew-icon"/><!-- v11 -->
-	<phrase id="PrinterFriendlyText" value="打印机友好页面"/>
-	<phrase id="PrivacyPolicy" value="隐私权保护政策"/><!-- v2019 -->
-	<phrase id="PrivacyPolicyContent" value="在本页面设置“隐私权保护政策”"/><!-- v2019 -->
-	<phrase id="Qtr1" value="第一季度"/><!-- v2020 (report) -->
-	<phrase id="Qtr2" value="第二季度"/><!-- v2020 (report) -->
-	<phrase id="Qtr3" value="第三季度"/><!-- v2020 (report) -->
-	<phrase id="Qtr4" value="第四季度"/><!-- v2020 (report) -->
-	<phrase id="QuickSearch" value="快速搜索"/>
-	<phrase id="QuickSearchBtn" value="给我搜！"/>
-	<phrase id="QuickSearchAuto" value="自动" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchAutoShort" value="" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchAll" value="所有词" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchAllShort" value="所有" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchAny" value="任意词" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchAnyShort" value="任何" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchExact" value="精确匹配" client="1"/><!-- v11 -->
-	<phrase id="QuickSearchExactShort" value="精确" client="1"/><!-- v11 -->
-	<phrase id="Record" value="记录" client="1"/><!-- v2017 -->
-	<phrase id="RecordChangedByOtherUser" value="数据已被其他用户更改。点击[刷新]可读取最新的数据（但您在表中输入的数据将被丢失），或点击[覆盖]保存您输入的数据。"/>
-	<phrase id="RecordDeleted" value="个记录已删除"/>
-	<phrase id="RecordInserted" value="个记录已插入"/>
-	<phrase id="RecordUpdated" value="个记录已更新"/>
-	<phrase id="RecordsPerPage" value="每页显示记录数量" client="1"/><!-- v2017 -->
-	<phrase id="Register" value="注册" client="1"/><!-- v2020 -->
-	<phrase id="RegisterBtn" value="注册"/>
-	<phrase id="RegisterSuccess" value="注册成功"/>
-	<phrase id="RegisterSuccessActivate" value="注册成功。激活电邮已经发送到您的邮箱，请到邮箱中点击激活链接来激活您的帐号。"/>
-	<phrase id="RegisterPage" value="用户注册"/>
-	<phrase id="RelatedRecordRequired" value="无法添加或更新记录，因外部键值不在主表 '%t' 中"/>
-	<phrase id="RelatedRecordExists" value="无法删除记录，因其相关记录已保存在从表 '%t' 中"/>
-	<phrase id="ReloadBtn" value="刷新" client="1"/><!-- v2017 -->
-	<phrase id="ReloadLink" value="刷新"/>
-	<phrase id="RememberMe" value="记住我"/>
-	<phrase id="Remove" value="删除"/>
-	<phrase id="Replace" value="替换"/>
-	<phrase id="Report" value="报表"/>
-	<phrase id="ResetPwd" value="重置密码"/><!-- v2020 -->
-	<phrase id="ResetPwdMsg" value="重置密码"/><!-- v2020 -->
-	<phrase id="ResendRegisterEmailBtn" value="Resend registration email"/><!-- v12 -->
-	<phrase id="ResendRegisterEmailSuccess" value="Registration email for user '%u' has been re-sent"/><!-- v12 -->
-	<phrase id="ResendRegisterEmailFailure" value="Failed to re-send register email for user '%u' has failed"/><!-- v12 -->
-	<phrase id="Reset" value="重置"/>
-	<phrase id="ResetAllFilter" value="重置所有筛选条件" class="icon-reset-search ew-icon"/><!-- v2020 (report) -->
-	<phrase id="ResetConcurrentUserBtn" value="重置并发用户会话"/><!-- v12 -->
-	<phrase id="ResetConcurrentUserSuccess" value="用户 '%u' 的会话已被重置"/><!-- v12 -->
-	<phrase id="ResetConcurrentUserFailure" value="无法重置用户 '%u'的会话"/><!-- v12 -->
-	<phrase id="ResetLoginRetryBtn" value="重置登入失败次数"/><!-- v12 -->
-	<phrase id="ResetLoginRetrySuccess" value="用户 '%u' 的登入失败次数已被重置"/><!-- v12 -->
-	<phrase id="ResetLoginRetryFailure" value="无法为用户 '%u' 重置登入失败次数"/><!-- v12 -->
-	<phrase id="ResetSearchBtn" value="重置" class="icon-reset-search ewIcon"/><!-- v11 -->
-	<phrase id="ResetSearch" value="重置"/>
-	<phrase id="RptAvg" value="平均"/><!-- v2020 (report) -->
-	<phrase id="RptCnt" value="计数"/><!-- v2020 (report) -->
-	<phrase id="RptDtlRec" value="详细记录"/><!-- v2020 (report) -->
-	<phrase id="RptGrandSummary" value="总计"/><!-- v2020 (report) -->
-	<phrase id="RptMax" value="最大"/><!-- v2020 (report) -->
-	<phrase id="RptMin" value="最小"/><!-- v2020 (report) -->
-	<phrase id="RptPageSummary" value="本页小计"/><!-- v2020 (report) -->
-	<phrase id="RptSum" value="合计"/><!-- v2020 (report) -->
-	<phrase id="RptSumHead" value="%c: %v 摘要"/><!-- v2020 (report) -->
-	<phrase id="SaveBtn" value="保存" client="1"/><!-- v2018 -->
-	<phrase id="SaveCurrentFilter" value="保存当前筛选条件"/><!-- v12 -->
-	<phrase id="SaveUserName" value="记住用户名"/><!-- Deprecated since v2018 -->
-	<phrase id="Search" value="搜索" client="1"/><!-- v2017 -->
-	<phrase id="SearchBtn" value="搜索" client="1"/><!-- v2018 -->
-	<phrase id="SearchLink" value="搜索" class="fa fa-search ew-icon"/><!-- v2019 -->
-	<phrase id="SearchPanel" value="搜索面板"/><!-- v11 -->
-	<phrase id="SelectBtn" value="选择" client="1"/><!-- v2017 -->
-	<phrase id="SendEmailBtn" value="发送"/>
-	<phrase id="SendEmailSuccess" value="电邮成功发送" client="1"/>
-	<phrase id="SendPwd" value="发送密码" client="1"/><!-- v2020 -->
-	<phrase id="SequenceNumber" value="%s."/>
-	<phrase id="ServerCommunicationError" value="与服务器通讯时发生错误。"/><!-- v2017 -->
-	<phrase id="SessionWillExpire" value="本次会话将于 %s秒后终止，请点击“确定”以继续本次会话。" client="1"/><!-- v12 -->
-	<phrase id="SessionExpired" value="本次会已终止。" client="1"/><!-- v12 -->
-	<phrase id="SetPasswordExpiredBtn" value="设置密码有效期"/><!-- v12 -->
-	<phrase id="SetPasswordExpiredSuccess" value="用户 '%u' 的密码已被设置为失效"/><!-- v12 -->
-	<phrase id="SetPasswordExpiredFailure" value="无法将用户 '%u' 的密码设置为失效"/><!-- v12 -->
-	<phrase id="ShowAllBtn" value="显示所有记录" class="icon-reset-search ew-icon"/><!-- v11 -->
-	<phrase id="ShowAll" value="显示所有记录"/><!-- v11 -->
-	<phrase id="SrchLegend" value=""/>
-	<phrase id="Success" value="成功" client="1"/><!-- v2020 -->
-	<phrase id="Summary" value="摘要"/><!-- v2020 (report) -->
-	<phrase id="SummaryColon" value=": "/><!-- v2020 (report) -->
-	<phrase id="Table" value="表"/>
-	<phrase id="TableOrView" value="表" client="1"/><!-- v2018 -->
-	<phrase id="Tasks" value="任务"/><!-- v2020 (report) -->
-	<phrase id="TblTypeTABLE" value="表："/>
-	<phrase id="TblTypeVIEW" value="审阅："/>
-	<phrase id="TblTypeCUSTOMVIEW" value="自定义审阅："/>
-	<phrase id="TblTypeREPORT" value="报表："/>
-	<phrase id="To" value="至"/>
-	<phrase id="Top" value="Top"/><!-- v2020 (report) --><!-- todo -->
-	<phrase id="Total" value="合计"/>
-	<phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
-	<phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
-	<phrase id="UnauthorizedMasterUserID" value="当前用户 (%c) 无权插入记录。主过滤器: %f"/>
-	<phrase id="Update" value="更新"/>
-	<phrase id="UpdateBtn" value="更新" client="1"/><!-- v2017 -->
-	<phrase id="UpdateCancelled" value="更新已取消"/>
-	<phrase id="UpdateFailed" value="更新失败"/>
-	<phrase id="UpdateLink" value="更新" class="fa fa-check ew-icon"/><!-- v2019 -->
-	<phrase id="UpdateSelectAll" value="选择所有"/><!-- v11 -->
-	<phrase id="UpdateSelectedLink" value="更新已选定的记录" class="icon-edit ew-icon"/><!-- v11 -->
-	<phrase id="UpdateSuccess" value="更新成功"/>
-	<phrase id="Uploading" value="正在上传……" client="1"/>
-	<phrase id="UploadStart" value="开始" client="1"/>
-	<phrase id="UploadCancel" value="取消" client="1"/>
-	<phrase id="UploadDelete" value="删除" client="1"/>
-	<phrase id="UploadOverwrite" value="覆盖现有文件？" client="1"/>
-	<phrase id="UploadErrMsg1" value="上传的文件大小超出服务器php.ini中upload_max_filesize的限制。"/>
-	<phrase id="UploadErrMsg2" value="上传的文件大小超出本系统MAX_FILE_SIZE所设定的限制。"/>
-	<phrase id="UploadErrMsg3" value="文件未能完整上传"/>
-	<phrase id="UploadErrMsg4" value="没有文件上传"/>
-	<phrase id="UploadErrMsg6" value="缺失临时文件夹"/>
-	<phrase id="UploadErrMsg7" value="未能在磁盘中写入文件"/>
-	<phrase id="UploadErrMsg8" value="文件上传已被一个PHP模块阻止"/>
-	<phrase id="UploadErrMsgPostMaxSize" value="上传的文件大小超出服务器php.ini中post_max_size的限制。"/>
-	<phrase id="UploadErrMsgMaxFileSize" value="文件太大" client="1"/>
-	<phrase id="UploadErrMsgMinFileSize" value="文件太小" client="1"/>
-	<phrase id="UploadErrMsgAcceptFileTypes" value="不允许的文件格式" client="1"/>
-	<phrase id="UploadErrMsgMaxNumberOfFiles" value="文件数量超出限制" client="1"/>
-	<phrase id="UploadErrMsgMaxWidth" value="图像超出宽度限制"/>
-	<phrase id="UploadErrMsgMinWidth" value="图像需指定最小宽度值"/>
-	<phrase id="UploadErrMsgMaxHeight" value="图像超出高度限制"/>
-	<phrase id="UploadErrMsgMinHeight" value="图像需指定最小高度值"/>
-	<phrase id="UploadErrMsgMaxFileLength" value="图像文件名超出字段长度限制" client="1"/>
-	<phrase id="UserAdministrator" value="Administrator" client="1"/><!-- v12 -->
-	<phrase id="UserAnonymous" value="Anonymous" client="1"/><!-- v12 -->
-	<phrase id="UserDefault" value="Default" client="1"/><!-- v12 -->
-	<phrase id="UserEmail" value="电邮"/>
-	<phrase id="UserExists" value="用户已存在"/>
-	<phrase id="UserLevel" value="用户等级： "/>
-	<phrase id="UserLevelAdministratorName" value="等级为-1的用户名等级名称必须为'Administrator'。" client="1"/>
-	<phrase id="UserLevelAnonymousName" value="等级为-2的用户等级名称'Anonymous'" client="1"/><!-- v12 -->
-	<phrase id="UserLevelPermission" value="用户等级权限"/>
-	<phrase id="UserLevelIDInteger" value="用户等级ID必须为整数。" client="1"/>
-	<phrase id="UserLevelDefaultName" value="等级为0的用户等级名称必须为'Default'。" client="1"/>
-	<phrase id="UserLevelIDIncorrect" value="自定义用户等级ID必须大于0。" client="1"/>
-	<phrase id="UserLevelNameIncorrect" value="自定义用户等级名称不可为'Administrator'或'Default'" client="1"/>
-	<phrase id="UserLoggedIn" value="用户'%u'已经登入！"/>
-	<phrase id="UserName" value="用户名"/>
-	<phrase id="UserNotFound" value="无法找到用户 '%u'"/><!-- v2018 -->
-	<phrase id="UserProfileCorrupted" value="用户信息错误，请登出后重新登入。"/>
-	<phrase id="ValueNotExist" value="值不存在" client="1"/><!-- v11 -->
-	<phrase id="View" value="查阅"/>
-	<phrase id="ViewImageGallery" value="查阅图像"/><!-- v12 -->
-	<phrase id="ViewLink" value="查阅" class="icon-view ew-icon"/><!-- v11 -->
-	<phrase id="ViewPageAddLink" value="添加" class="fa fa-plus ew-icon"/><!-- v2019 -->
-	<phrase id="ViewPageCopyLink" value="复制" class="icon-copy ew-icon"/><!-- v11 -->
-	<phrase id="ViewPageDeleteLink" value="删除" class="fa fa-trash ew-icon"/><!-- v2019 -->
-	<phrase id="ViewPageDetailLink" value=""/>
-	<phrase id="ViewPageEditLink" value="编辑" class="icon-edit ew-icon"/><!-- v11 -->
-	<phrase id="Warning" value="警告" client="1"/><!-- v2020 -->
-	<phrase id="Week" value="周"/><!-- v2020 (report) -->
-	<phrase id="WrongFileType" value="本文件格式不可上传。" client="1"/>
-	<phrase id="Year" value="年"/><!-- v2020 (report) -->
-	<phrase id="=" value="&amp;nbsp;"/><!-- v12 -->
-	<phrase id="EQUAL" value="="/><!-- v12 -->
-	<phrase id="&lt;&gt;" value="&amp;lt;&amp;gt;"/>
-	<phrase id="&lt;" value="&amp;lt;"/>
-	<phrase id="&lt;=" value="&amp;lt;="/>
-	<phrase id="&gt;" value="&amp;gt;"/>
-	<phrase id="&gt;=" value="&amp;gt;="/>
-	<phrase id="LIKE" value="包含"/>
-	<phrase id="NOT LIKE" value="不包含"/><!-- v11.0.3 -->
-	<phrase id="STARTS WITH" value="开头字符"/>
-	<phrase id="ENDS WITH" value="结尾字符"/>
-	<phrase id="IS NULL" value="为空"/>
-	<phrase id="IS NOT NULL" value="非空"/>
-	<phrase id="BETWEEN" value="区间"/>
-	<phrase id="AND" value="和"/>
-	<phrase id="OR" value="或"/>
-	<phrase id="AM" value="上午"/><!-- v2017 -->
-	<phrase id="PM" value="下午"/><!-- v2017 -->
-<!-- Menu Prefix/Suffix (v2020 (report)) -->
-	<phrase id="SimpleReportMenuItemPrefix" value=""/>
-	<phrase id="SimpleReportMenuItemSuffix" value=""/>
-	<phrase id="DetailSummaryReportMenuItemPrefix" value=""/>
-	<phrase id="DetailSummaryReportMenuItemSuffix" value=""/>
-	<phrase id="CrosstabReportMenuItemPrefix" value=""/>
-	<phrase id="CrosstabReportMenuItemSuffix" value=""/>
-	<phrase id="ChartReportMenuItemPrefix" value=""/>
-	<phrase id="ChartReportMenuItemSuffix" value=""/>
-<!-- Advanced Filter (v2020 (report)) -->
-	<phrase id="Future" value="未来"/>
-	<phrase id="Past" value="过去"/>
-	<phrase id="Last14Days" value="前 14 天"/>
-	<phrase id="Last30Days" value="前 30 天"/>
-	<phrase id="Last7Days" value="前 7 天"/>
-	<phrase id="Next14Days" value="未来 14 天"/>
-	<phrase id="Next30Days" value="未来 30 天"/>
-	<phrase id="Next7Days" value="未来 7 天"/>
-	<phrase id="Today" value="今天"/>
-	<phrase id="Tomorrow" value="明天"/>
-	<phrase id="Yesterday" value="昨天"/>
-	<phrase id="LastMonth" value="上月"/>
-	<phrase id="NextMonth" value="下月"/>
-	<phrase id="ThisMonth" value="本月"/>
-	<phrase id="LastTwoWeeks" value="过去两周"/>
-	<phrase id="LastWeek" value="上周"/>
-	<phrase id="NextTwoWeeks" value="未来两周"/>
-	<phrase id="NextWeek" value="下周"/>
-	<phrase id="ThisWeek" value="本周"/>
-	<phrase id="LastYear" value="去年"/>
-	<phrase id="NextYear" value="明年"/>
-	<phrase id="ThisYear" value="今年"/>
+    <phrase id="2FADisabled" value="双重认证被禁用" client="1"/><!-- v2022 -->
+    <phrase id="2FAEnabled" value="双重认证已启用" client="1"/><!-- v2022 -->
+    <phrase id="2FAResetFailed" value="无法禁用双重认证" client="1"/><!-- v2022 -->
+    <phrase id="2FAVerificationFailed" value="双重认证失败" client="1"/><!-- v2022 -->
+    <phrase id="Accept" value="接受"/><!-- v2019 -->
+    <phrase id="ActionDeleted" value="已删除"/>
+    <phrase id="ActionInserted" value="已插入"/>
+    <phrase id="ActionInsertedGridAdd" value="多列插入成功"/>
+    <phrase id="ActionUpdated" value="已更新"/>
+    <phrase id="ActionUpdatedGridEdit" value="多列编辑成功"/>
+    <phrase id="ActionUpdatedMultiUpdate" value="多列更新成功"/>
+    <phrase id="ActivateAccount" value="帐号已成功激活"/>
+    <phrase id="ActivateFailed" value="激活失败"/>
+    <phrase id="Add" value="添加"/>
+    <phrase id="AddBlankRow" value="添加空白行" class="fa fa-plus ew-icon"/><!-- v2019 -->
+    <phrase id="AddBtn" value="添加" client="1"/><!-- v2018 -->
+    <phrase id="AddLink" value="添加" class="fa fa-plus ew-icon"/><!-- v2019 -->
+    <phrase id="AddMasterDetailLink" value="添加主/从表格" class="icon-md-add ew-icon"/><!-- v11 -->
+    <phrase id="AddSuccess" value="成功添加"/>
+    <phrase id="AdvancedSearch" value="高级搜索"/><!-- v11 -->
+    <phrase id="AdvancedSearchBtn" value="高级搜索" class="icon-advanced-search ew-icon"/><!-- v11 -->
+    <phrase id="AggregateColon" value=": "/><!-- v2020 -->
+    <phrase id="AggregateEqual" value="="/><!-- v2020 -->
+    <phrase id="AllRecords" value="所有"/>
+    <phrase id="AllWord" value="所有关键字"/>
+    <phrase id="AnyWord" value="任意关键字"/>
+    <phrase id="ApiTitle" value="REST API"/><!-- v2021 -->
+    <phrase id="AuditTrailAutoLogin" value="自动登入"/>
+    <phrase id="AuditTrailFailedAttempt" value="失败的尝试次数：%n"/>
+    <phrase id="AuditTrailUserLoggedIn" value="用户已登入"/>
+    <phrase id="AuditTrailPasswordExpired" value="密码已过期"/>
+    <phrase id="AuditTrailLogin" value="登入"/>
+    <phrase id="AuditTrailLogout" value="登出"/>
+    <phrase id="AutoLoginFailed" value="自动登入失败"/><!-- v2018 -->
+    <phrase id="Average" value="平均"/>
+    <phrase id="BackToList" value="返回列表"/>
+    <phrase id="BackToLogin" value="返回到登入页"/>
+    <phrase id="BackToMasterRecordPage" value="返回主列表页面"/>
+    <phrase id="BackupCodes" value="双重认证备份代码(2FA)" client="1"/><!-- v2022 -->
+    <phrase id="BackupCodesMsg" value="请将备份代码保存在安全并可访问的地方。每个备份代码只能使用一次。" client="1"/><!-- v2022 -->
+    <phrase id="BatchDeleteBegin" value="*** 批量删除开始 ***"/>
+    <phrase id="BatchDeleteRollback" value="*** 批量删除回滚 ***"/>
+    <phrase id="BatchDeleteSuccess" value="*** 批量删除成功 ***"/>
+    <phrase id="BatchInsertBegin" value="*** 批量插入开始 ***"/>
+    <phrase id="BatchInsertRollback" value="*** 批量插入回滚 ***"/>
+    <phrase id="BatchInsertSuccess" value="*** 批量插入成功 ***"/>
+    <phrase id="BatchUpdateBegin" value="*** 批量更新开始 ***"/>
+    <phrase id="BatchUpdateRollback" value="*** 批量更新回滚 ***"/>
+    <phrase id="BatchUpdateSuccess" value="*** 批量更新成功 ***"/>
+    <phrase id="BlankOptionText" value="&amp;nbsp;"/><!-- v2022 -->
+    <phrase id="BooleanNo" value="No"/><!-- v2020 -->
+    <phrase id="BooleanYes" value="Yes"/><!-- v2020 -->
+    <phrase id="ButtonActions" value="操作" class="fas fa-bars ew-icon"/><!-- v2022 -->
+    <phrase id="ButtonAddEdit" value="添加/编辑" class="icon-addedit ew-icon"/><!-- v11 -->
+    <phrase id="ButtonDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
+    <phrase id="ButtonExport" value="导出" class="fas fa-download ew-icon"/><!-- v2019 -->
+    <phrase id="ButtonImport" value="导入" class="fas fa-upload ew-icon"/><!-- v2019 -->
+    <phrase id="ButtonListOptions" value="选项" class="fas fa-bars ew-icon"/><!-- v2022 -->
+    <phrase id="ButtonListOptionsCard" value="选项" class="fas fa-ellipsis-v ew-icon"/><!-- v2022 -->
+    <phrase id="ButtonSearch" value="搜索" class="icon-search ew-icon"/><!-- v11 -->
+    <phrase id="CancelBtn" value="取消" client="1"/><!-- v2017 -->
+    <phrase id="CancelLink" value="取消" class="fa fa-times ew-icon"/><!-- v2019 -->
+    <phrase id="ChangePassword" value="更改密码" client="1"/><!-- v2020 -->
+    <phrase id="ChangePasswordMessage" value="更改密码"/><!-- v2019 -->
+    <phrase id="ChangePasswordPage" value="更改密码"/>
+    <phrase id="ChangePasswordBtn" value="更改"/>
+    <phrase id="ChartExportErrMsg1" value="无法从 %e 获取 %t 图像。"/><!-- v2021 -->
+    <phrase id="ChartExportErrMsg2" value="缺失文件名。"/><!-- v2021 -->
+    <phrase id="ChartExportErrMsg3" value="上传目录不存在。"/><!-- v2021 -->
+    <phrase id="ChartExportErrMsg4" value="无法写入上传目录。"/><!-- v2021 -->
+    <phrase id="ChartOrder" value="排序"/><!-- v2020 -->
+    <phrase id="ChartOrderXAsc" value="标签升序"/><!-- v2020 -->
+    <phrase id="ChartOrderXDesc" value="标签降序"/><!-- v2020 -->
+    <phrase id="ChartOrderYAsc" value="值升序"/><!-- v2020 -->
+    <phrase id="ChartOrderYDesc" value="值降序"/><!-- v2020 -->
+    <phrase id="ChooseFileBtn" value="选择..."/><!-- v11 -->
+    <phrase id="ChooseFile" value="拖放文件到这里或点击上传"/><!-- v2022 -->
+    <phrase id="ChooseFiles" value="拖放文件到这里或点击上传"/><!-- v2022 -->
+    <phrase id="Clear" value="清除"/><!-- v2022 -->
+    <phrase id="ClickReCaptcha" value="请点击reCAPTCHA" client="1"/><!-- v12 -->
+    <phrase id="ClickToDrillDown" value="点击钻取"/><!-- v2020 (report) -->
+    <phrase id="CloseAccountBtn" value="删除数据并关闭我的账号"/><!-- v2019 -->
+    <phrase id="CloseBtn" value="关闭" client="1"/><!-- v2017 -->
+    <phrase id="Columns" value="Columns" class="fas fa-columns ew-icon"/><!-- v2022 --><!-- todo -->
+    <phrase id="Confirm" value="确定"/>
+    <phrase id="ConfirmBtn" value="确认提交" client="1"/><!-- v2017 -->
+    <phrase id="ConfirmCancel" value="确认取消？" client="1"/><!-- v12 -->
+    <phrase id="ConfirmPassword" value="确认更改密码" client="1"/><!-- v2021 -->
+    <phrase id="ConflictCancelLink" value="取消"/>
+    <phrase id="CookieConsentTitle" value="Cookies" client="1"/><!-- v2021 -->
+    <phrase id="CookieConsentSummary" value="在这里制定本站的私隐和Cookie使用政策。" client="1"/><!-- v2021 -->
+    <phrase id="Copy" value="复制"/>
+    <phrase id="CopyLink" value="复制" class="icon-copy ew-icon"/><!-- v11 -->
+    <phrase id="CopyToClipboard" value="复制至粘贴板" client="1"/><!-- v2022 -->
+    <phrase id="CopiedToClipboard" value="已复制至粘贴板" client="1"/><!-- v2022 -->
+    <phrase id="Count" value="计数"/>
+    <phrase id="CountSelected" value="%s 已选定" client="1"/><!-- v12 -->
+    <phrase id="CtbSumHead" value="摘要"/><!-- v2020 -->
+    <phrase id="CurrentFilters" value="当前筛选条件："/><!-- v2020 -->
+    <phrase id="CurrentPassword" value="当前密码：" client="1"/><!-- v12 -->
+    <phrase id="CustomActionCompleted" value="操作 '%s' 已完成"/>
+    <phrase id="CustomActionCancelled" value="操作 '%s' 已取消"/>
+    <phrase id="CustomActionFailed" value="'%s' 已失败"/><!-- v12 -->
+    <phrase id="CustomActionNotAllowed" value="不允许 '%s'"/><!-- v12 -->
+    <phrase id="CustomView" value="自定义查阅"/>
+    <phrase id="Danger" value="错误" client="1"/><!-- v2020 -->
+    <phrase id="Debug" value="调试"/><!-- v2021 -->
+    <phrase id="Delete" value="删除"/>
+    <phrase id="DeleteBtn" value="确认删除"/>
+    <phrase id="DeleteCancelled" value="删除已取消"/>
+    <phrase id="DeleteConfirmMsg" value="确认删除该记录？" client="1"/>
+    <phrase id="DeleteFilter" value="删除筛选条件"/><!-- v12 -->
+    <phrase id="DeleteFilterConfirm" value="确认删除筛选条件 %s?" client="1"/><!-- v12 -->
+    <phrase id="DeleteLink" value="删除" class="fas fa-trash ew-icon"/><!-- v2019 -->
+    <phrase id="DeleteSelectedLink" value="删除所选记录" class="fas fa-trash ew-icon"/><!-- v2019 -->
+    <phrase id="DeleteSomeRecordsFailed" value="无法删除多个带主键 %k 的记录"/><!-- v2022 --><!-- to double check -->
+    <phrase id="DeleteSuccess" value="删除成功"/>
+    <phrase id="DetailLink" value=""/>
+    <phrase id="DetailCount" value="&lt;span class='badge bg-primary ew-detail-count-%c'&gt;%c&lt;/span&gt;"/><!-- v2022 -->
+    <phrase id="Details" value="详细" client="1"/><!-- v2022 -->
+    <phrase id="Disable2FA" value="禁用双重认证"/><!-- v2022 -->
+    <phrase id="Disable2FAMsg" value="确认禁用双重认证？" client="1"/><!-- v2022 -->
+    <phrase id="DisableNotifications" value="禁用通知" client="1"/><!-- v2022 -->
+    <phrase id="DisableNotificationsMsg" value="确认禁用通知？" client="1"/><!-- v2022 -->
+    <phrase id="DownloadBtn" value="下载"/><!-- v2019 -->
+    <phrase id="DrillDownAllRecords" value="所有记录"/><!-- v2020 -->
+    <phrase id="DrillDownFilters" value="钻取条件："/><!-- v2020 -->
+    <phrase id="DupIndex" value="值 '%v' 与唯一索引值 '%f'重复"/>
+    <phrase id="DupKey" value="重复的主键值：'%f'"/>
+    <phrase id="Edit" value="编辑"/>
+    <phrase id="EditBtn" value="编辑" client="1"/><!-- v2018 -->
+    <phrase id="EditLink" value="编辑" class="icon-edit ew-icon"/><!-- v11 -->
+    <phrase id="Email" value="Email" client="1"/><!-- v2021 -->
+    <phrase id="EmailFormSender" value="发件人"/>
+    <phrase id="EmailFormRecipient" value="收件人"/>
+    <phrase id="EmailFormCc" value="抄送人"/>
+    <phrase id="EmailFormBcc" value="密送人"/>
+    <phrase id="EmailFormSubject" value="主题"/>
+    <phrase id="EmailFormMessage" value="正文"/>
+    <phrase id="EmailFormContentType" value="电邮格式"/>
+    <phrase id="EmailFormContentTypeUrl" value="链接"/>
+    <phrase id="EmailFormContentTypeHtml" value="网页"/>
+    <phrase id="EmptyLabel" value="(空)"/><!-- v2020 -->
+    <phrase id="Enable2FA" value="启用双重认证"/><!-- v2022 -->
+    <phrase id="EnableNotifications" value="启用通知" client="1"/><!-- v2022 -->
+    <phrase id="EnterFilterName" value="输入筛选条件名称" client="1"/><!-- v12 -->
+    <phrase id="EnterNewPassword" value="请输入新密码" client="1"/>
+    <phrase id="EnterOldPassword" value="请输入旧密码" client="1"/>
+    <phrase id="EnterPassword" value="请输入密码" client="1"/>
+    <phrase id="EnterRequiredField" value="请输入必填字段 - %s" client="1"/><!-- v2021 -->
+    <phrase id="EnterSearchCriteria" value="请输入查询规则"/>
+    <phrase id="EnterSecurityCode" value="请输入Google Authenticator验证码（或备份代码）" client="1"/><!-- v2022 -->
+    <phrase id="EnterUserName" value="请输入用户名" client="1"/>
+    <phrase id="EnterValidateCode" value="请输入验证码" client="1"/><!-- v11 -->
+    <phrase id="EnterProperSenderEmail" value="发件人电邮数量超出限制或电邮地址不正确" client="1"/>
+    <phrase id="EnterProperRecipientEmail" value="收件人数量超出限制或电邮地址不正确" client="1"/>
+    <phrase id="EnterProperCcEmail" value="抄送人数量超出限制或电子邮件地址不正确" client="1"/>
+    <phrase id="EnterProperBccEmail" value="密送人数量超出限制或电子邮件地址不正确" client="1"/>
+    <phrase id="EnterSubject" value="请输入主题" client="1"/>
+    <phrase id="EnterValue" value="Please enter value" client="1"/><!-- v2021 -->
+    <phrase id="EnterValue2" value="Please enter second value" client="1"/><!-- v2021 -->
+    <phrase id="Error" value="错误"/><!-- v2021 -->
+    <phrase id="ExactPhrase" value="精确查询"/>
+    <phrase id="ExceedMaxRetry" value="登录尝试次数超出限制，账号已被锁定，请 %t 分钟后再试。"/>
+    <phrase id="ExceedMaxEmailExport" value="导出电邮地址数量超出限制，请稍后再试。"/>
+    <phrase id="ExportChart" value="正在导出图表：" client="1"/><!-- v2020 -->
+    <phrase id="ExportChartData" value="正在导出图表数据" client="1"/><!-- v2020 -->
+    <phrase id="ExportChartError" value="无法导出图表：" client="1"/><!-- v2020 -->
+    <phrase id="ExportClassNotFound" value="无法找到导出类"/><!-- v2019 -->
+    <phrase id="Exporting" value="正在导出，请稍候……" client="1"/><!-- v2018 -->
+    <phrase id="ExportingChart" value="正在导出图表 (%t 中的 %c)，请稍候……" client="1"/><!-- v2020 -->
+    <phrase id="ExportToCsv" value="导出CSV文件" class="icon-csv ew-icon"/><!-- v11 -->
+    <phrase id="ExportToCsvText" value="导出CSV文件"/>
+    <phrase id="ExportToEmail" value="通过电邮导出" class="icon-email ew-icon"/><!-- v11 -->
+    <phrase id="ExportToEmailText" value="通过电邮导出" client="1"/>
+    <phrase id="ExportToExcel" value="导出Excel文档" class="icon-excel ew-icon"/><!-- v11 -->
+    <phrase id="ExportToExcelText" value="导出Excel文档"/>
+    <phrase id="ExportToHtml" value="导出HTML文档" class="icon-html ew-icon"/><!-- v11 -->
+    <phrase id="ExportToHtmlText" value="导出HTML文档"/>
+    <phrase id="ExportToPdf" value="导出PDF文档" class="icon-pdf ew-icon"/><!-- v11 -->
+    <phrase id="ExportToPdfText" value="导出PDF文档"/>
+    <phrase id="ExportToPrintText" value="打印机友好页面"/><!-- v2022 -->
+    <phrase id="ExportToWord" value="导出Word文档" class="icon-word ew-icon"/><!-- v11 -->
+    <phrase id="ExportToWordText" value="导出Word文档"/>
+    <phrase id="ExportToXml" value="导出XML文档" class="icon-xml ew-icon"/><!-- v11 -->
+    <phrase id="ExportToXmlText" value="导出XML文档"/>
+    <phrase id="FailedToExport" value="无法导出" client="1"/><!-- v2018 -->
+    <phrase id="FailedToSendMail" value="电邮发送失败。"/>
+    <phrase id="FieldName" value="字段名"/>
+    <phrase id="FieldRequiredIndicator" class="fas fa-asterisk ew-required"/><!-- v2019 -->
+    <phrase id="FileNotFound" value="文件未找到"/>
+    <phrase id="Filter" value="筛选条件" class="fas fa-filter"/><!-- v2022 -->
+    <phrase id="FilterAllRecords" value="所有记录" client="1"/><!-- v2022 -->
+    <phrase id="FilterCancel" value="取消" client="1"/><!-- v2022 -->
+    <phrase id="FilterName" value="筛选条件名称" client="1"/><!-- v12 -->
+    <phrase id="FilterNoValue" value="未选择值" client="1"/><!-- v2022 --><!-- to double check -->
+    <phrase id="FilterOK" value="OK" client="1"/><!-- v2022 -->
+    <phrase id="Filters" value="筛选条件" class="fas fa-filter ew-icon"/><!-- v2022 -->
+    <phrase id="ResetPasswordResponse" value="如果电邮地址填写无误，您将收到重置密码的指示。"/><!-- v2019 -->
+    <phrase id="ResetPassword" value="忘记密码" client="1"/><!-- v2020 -->
+    <phrase id="GeneratePassword" value="生成密码" class="fa fa-bolt ew-icon"/><!-- v2019 -->
+    <phrase id="GetNewCodes" value="获取新代码" client="1"/><!-- v2022 --><!-- to double check -->
+    <phrase id="GoBack" value="返回"/>
+    <phrase id="GridAddCancelled" value="多列添加已取消"/><!-- v11 -->
+    <phrase id="GridAddLink" value="多列添加" class="icon-grid-add ew-icon"/><!-- v11 -->
+    <phrase id="GridCancelLink" value="取消" class="fa fa-times ew-icon"/><!-- v2019 -->
+    <phrase id="GridEditCancelled" value="多列编辑已取消"/><!-- v11 -->
+    <phrase id="GridEditLink" value="多列编辑" class="icon-grid-edit ew-icon"/><!-- v11 -->
+    <phrase id="GridInsertLink" value="添加" class="fa fa-check ew-icon"/><!-- v2019 -->
+    <phrase id="GridSaveLink" value="保存" class="fa fa-check ew-icon"/><!-- v2019 -->
+    <phrase id="Group" value="Groups"/><!-- v2020 --><!-- todo -->
+    <phrase id="GroupsPerPage" value="Groups per page"/><!-- v2020 --><!-- todo -->
+    <phrase id="Highlight" value="高亮"/><!-- v11 -->
+    <phrase id="HighlightBtn" value="高亮" class="icon-highlight ew-icon"/><!-- v11 -->
+    <phrase id="HomePage" value="首页" class="fas fa-home ew-icon"/><!-- v2019 -->
+    <phrase id="Import" value="导入" class="fas fa-upload ew-icon"/><!-- v2019 -->
+    <phrase id="ImportBtn" value="导入"/><!-- v2019 -->
+    <phrase id="ImportMessageError1" value="已从 %f 成功导入 %t 中的 %c 个记录（成功导入 %s 个，失败 %e 个）" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageError2" value="，错误： %e 个" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageError3" value="行 %i ： %d " client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageError4" value="记录文件： %l" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageInvalidFileExtension" value="无效的文件格式 '%e'"/><!-- v2019 -->
+    <phrase id="ImportMessageInvalidFieldName" value="无效的文件名： %f"/><!-- v2019 -->
+    <phrase id="ImportMessageInvalidFieldValue" value="无效的值（字段名： %f）： %v"/><!-- v2019 -->
+    <phrase id="ImportMessageMore" value="(%s more)" client="1"/><!-- v2019 --><!-- todo -->
+    <phrase id="ImportMessageNoHeaderRow" value="无法找到表头导入"/><!-- v2019 -->
+    <phrase id="ImportMessageProgress" value="正在从 %f 中导入 %t 个记录中的 %c 个……" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageServerError" value="服务器错误 %s: %t" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageSuccess" value="成功从 %f 中导入 %t 个记录中的 %c 个" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageUploadError" value="无法上传 %f ： %s " client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageUploadComplete" value="上传完成" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageUploadProgress" value="正在上传……(p%)" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessagePleaseSelect" value="请选择文件" client="1"/><!-- v2019 -->
+    <phrase id="ImportMessageIncorrectFileType" value="错误的文件类型" client="1"/><!-- v2019 -->
+    <phrase id="ImportText" value="导入" client="1"/><!-- v2019 -->
+    <phrase id="IncorrectCreditCard" value="错误的信用卡号"/><!-- v2021 -->
+    <phrase id="IncorrectDate" value="错误的日期 (%s)"/><!-- v2021 -->
+    <phrase id="IncorrectEmail" value="错误的电邮" client="1"/>
+    <phrase id="IncorrectField" value="错误的字段" client="1"/>
+    <phrase id="IncorrectFloat" value="错误的浮点数字" client="1"/>
+    <phrase id="IncorrectGUID" value="错误的GUID" client="1"/>
+    <phrase id="IncorrectInteger" value="错误的整数" client="1"/>
+    <phrase id="IncorrectPhone" value="错误的电话号码" client="1"/>
+    <phrase id="IncorrectRange" value="数字必须介于 %1 和 %2" client="1"/>
+    <phrase id="IncorrectRegExp" value="正则表达式不匹配" client="1"/>
+    <phrase id="IncorrectSecurityCode" value="验证码错误"/><!-- v2022 -->
+    <phrase id="IncorrectSSN" value="错误的社会保险号" client="1"/>
+    <phrase id="IncorrectTime" value="错误的时间格式 (%s)" client="1"/><!-- v2022 -->
+    <phrase id="IncorrectUrl" value="无效的 URL" client="1"/><!-- v2022 -->
+    <phrase id="IncorrectValidationCode" value="验证码错误，请再次输入。" client="1"/><!-- v2021 -->
+    <phrase id="IncorrectZip" value="邮编错误" client="1"/>
+    <phrase id="Info" value="信息" client="1"/><!-- v2020 -->
+    <phrase id="InlineAddLink" value="快速添加" class="icon-inline-add ew-icon"/><!-- v11 -->
+    <phrase id="InlineCopyLink" value="快速复制" class="icon-inline-copy ew-icon"/><!-- v11 -->
+    <phrase id="InlineEditLink" value="快速编辑" class="icon-inline-edit ew-icon"/><!-- v11 -->
+    <phrase id="InsertCancelled" value="添加已取消"/>
+    <phrase id="InsertFailed" value="添加失败" client="1"/>
+    <phrase id="InsertLink" value="添加" class="fa fa-check ew-icon"/><!-- v2019 -->
+    <phrase id="InsertSuccess" value="成功添加"/>
+    <phrase id="InvalidDate" value="日期错误" client="1"/><!-- v2021 -->
+    <phrase id="InvalidKeyValue" value="无效的键值"/>
+    <phrase id="InvalidRecord" value="无效的记录！主键为空" client="1"/>
+    <phrase id="InvalidPostRequest" value="无效的提交请求"/><!-- v11 -->
+    <phrase id="InvalidParameter" value="无效的参数"/>
+    <phrase id="InvalidPassword" value="无效的密码"/>
+    <phrase id="InvalidPasswordChars" value="密码不可包含 &amp;, &lt;, &gt;, &quot;, or &apos;" client="1"/><!-- v2021 -->
+    <phrase id="InvalidNewPassword" value="无效的新密码"/>
+    <phrase id="InvalidUidPwd" value="不正确的用户名或密码"/>
+    <phrase id="InvalidUsernameChars" value="用户名不可包含 &amp;, &lt;, &gt;, &quot;, or &apos;" client="1"/><!-- v2021 -->
+    <phrase id="Language" value="语言"/>
+    <phrase id="LearnMore" value="了解更多"/><!-- v2019 -->
+    <phrase id="LightboxTitle" value=" " client="1"/><!-- v11 -->
+    <phrase id="LightboxCurrent" value="图像数 {current} / {total}" client="1"/><!-- Note: DO NOT translate "{current}" and "{total}" --><!-- v11 -->
+    <phrase id="LightboxPrevious" value="上一个" client="1"/><!-- v11 -->
+    <phrase id="LightboxNext" value="下一个" client="1"/><!-- v11 -->
+    <phrase id="LightboxClose" value="关闭" client="1"/><!-- v11 -->
+    <phrase id="LightboxXhrError" value="无法加载本内容。" client="1"/><!-- v11 -->
+    <phrase id="LightboxImgError" value="无法加载本图像。" client="1"/><!-- v11 -->
+    <phrase id="List" value=""/><!-- v2019 -->
+    <phrase id="ListActionButton" value="操作" class="fas fa-ellipsis-v"/><!-- v2020 -->
+    <phrase id="Loading" value="正在载入..." client="1"/>
+    <phrase id="Login" value="登入" class="fas fa-sign-in-alt ew-icon" client="1"/><!-- v2022 -->
+    <phrase id="LoginCancelled" value="登入已取消"/>
+    <phrase id="LoginFacebook" value="使用Facebook ID登入"/><!-- v2018 -->
+    <phrase id="LoginFailed" value="无法使用 %p ID登入"/><!-- v2018 -->
+    <phrase id="LoginGoogle" value="使用Google ID登入"/><!-- v2018 -->
+    <phrase id="LoginMsg" value="请登入"/><!-- v2019 -->
+    <phrase id="LoginOptions" value="选项"/><!-- v11 -->
+    <phrase id="LoginOr" value="- 或者 -"/><!-- v2018 -->
+    <phrase id="LoginPage" value="登入"/>
+    <phrase id="Login2FAPage" value="登入（双重认证）"/><!-- v2022 -->
+    <phrase id="Logout" class="fas fa-sign-out-alt ew-icon" value="登出"/><!-- v2022 -->
+    <phrase id="LookupTitle" value="查找 - %s" client="1"/><!-- v2022 -->
+    <phrase id="MasterDetailCopyLink" value="主/从 复制" class="icon-md-copy ew-icon"/><!-- v11 -->
+    <phrase id="MasterDetailEditLink" value="主/从 编辑" class="icon-md-edit ew-icon"/><!-- v11 -->
+    <phrase id="MasterDetailListLink" value="主/从 列表" class="icon-table ew-icon"/><!-- v11 -->
+    <phrase id="MasterDetailViewLink" value="主/从 查阅" class="icon-md-view ew-icon"/><!-- v11 -->
+    <phrase id="MaxFileSize" value="超出文件大小限制（%s 字节）。" client="1"/>
+    <phrase id="MismatchPassword" value="密码不匹配" client="1"/>
+    <phrase id="MissingLookupTableName" value="查找表格名称缺失"/>
+    <phrase id="MissingDisplayFieldName" value="缺失字段标题名称"/>
+    <phrase id="MissingDisplayFieldValue" value="缺失显示字段值"/>
+    <phrase id="MissingPDFObject" value="缺失PDFObject" client="1"/><!-- v2020 -->
+    <phrase id="MissingUserLevelID" value="缺失用户等级ID"/>
+    <phrase id="MissingUserLevelName" value="缺失用户等级名称"/>
+    <phrase id="MultiColumnCards" value="卡片视图" class="fas fa-th-large ew-icon"/><!-- v2022 -->
+    <phrase id="MultiColumnTable" value="列表视图" class="fas fa-table ew-icon"/><!-- v2022 -->
+    <phrase id="MultipleMasterDetails" value="主/从" class="icon-master-detail ew-icon"/><!-- v11 -->
+    <phrase id="NewPassword" value="新密码" client="1"/><!-- v2021 -->
+    <phrase id="Next" value="下一个" client="1"/><!-- v12 -->
+    <phrase id="NoAddRecord" value="没有记录被添加" client="1"/>
+    <phrase id="NoFieldSelected" value="没有字段被选择更新" client="1"/>
+    <phrase id="NoPermission" value="您没有权限读取 %s。"/><!-- v12.0.6 -->
+    <phrase id="NoAddPermission" value="您没有权限添加记录。"/>
+    <phrase id="NoChartData" value="无数据显示" client="1"/><!-- v2020 -->
+    <phrase id="NoDeletePermission" value="您没有权限删除记录。"/>
+    <phrase id="NoDistinctColVals" value="该SQL语句无法获得单独栏数据："/><!-- v2020 -->
+    <phrase id="NoEditPermission" value="您没有权限编辑记录。"/>
+    <phrase id="NoHtmlForm" value="无法找到HTML语句"/><!-- v2022 -->
+    <phrase id="NoRecord" value="没有记录返回" client="1"/><!-- v2017 -->
+    <phrase id="NoRecordForKey" value="无法找到记录匹配关键值 = "/>
+    <phrase id="NoReportOrCharts" value="没有本页面的报告或图表。"/><!-- v2020 (report) -->
+    <phrase id="NoRecordSelected" value="没有记录被选择" client="1"/>
+    <phrase id="NoSubscription" value="您并无订阅" client="1"/><!-- v2022 -->
+    <phrase id="NoSubscriptions" value="无法找到订阅" client="1"/><!-- v2022 -->
+    <phrase id="NoTableGenerated" value="未生成表"/>
+    <phrase id="Notice" value="通知"/><!-- v2021 -->
+    <phrase id="Notifications" value="通知" class="fas fa-bell ew-icon"/><!-- v2022 -->
+    <phrase id="NotificationsDisabled" value="通知已禁用" client="1"/><!-- v2022 -->
+    <phrase id="NotificationsEnabled" value="通知已启用" client="1"/><!-- v2022 -->
+    <phrase id="NoUserLevel" value="没有用户级别设置。"/>
+    <phrase id="NullLabel" value="(Null)"/><!-- v2020 -->
+    <phrase id="Of" value="共计" client="1"/><!-- v2017 -->
+    <phrase id="OKBtn" value="OK" client="1"/><!-- v2021 -->
+    <phrase id="Old" value="旧"/>
+    <phrase id="OldPassword" value="旧密码" client="1"/><!-- v2021 -->
+    <phrase id="OverwriteBtn" value="覆盖" client="1"/><!-- v2017 -->
+    <phrase id="OverwriteLink" value="覆盖"/>
+    <phrase id="Page" value="页码" client="1"/><!-- v2017 -->
+    <phrase id="PageNotFound" value="无法找到线路 '%p'。"/><!-- v2021 --><!-- to double check -->
+    <phrase id="PagerFirst" value="第一页"/>
+    <phrase id="PagerLast" value="最后一页"/>
+    <phrase id="PagerNext" value="下一页"/>
+    <phrase id="PagerPrevious" value="前一页"/>
+    <phrase id="Password" value="密码" client="1"/><!-- v2021 -->
+    <phrase id="PasswordMask" value="********"/><!-- v12 -->
+    <phrase id="PasswordRequest" value="密码请求"/>
+    <phrase id="PasswordChanged" value="密码已更改"/>
+    <phrase id="PasswordExpired" value="密码已过期，请重置密码。"/>
+    <phrase id="PasswordStrength" value="强度：%p" client="1"/><!-- v12 -->
+    <phrase id="PasswordTooSimple" value="密码强度太低" client="1"/><!-- v12 -->
+    <phrase id="Permission" value="权限" class="icon-user ew-icon"/><!-- v11 -->
+    <phrase id="PermissionAdd" value="添加/复制" client="1"/><!-- v2020 -->
+    <phrase id="PermissionAdmin" value="管理员" client="1"/><!-- v2019 -->
+    <phrase id="PermissionDelete" value="删除" client="1"/><!-- v2018 -->
+    <phrase id="PermissionEdit" value="编辑" client="1"/><!-- v2018 -->
+    <phrase id="PermissionImport" value="导入" client="1"/><!-- v2020 -->
+    <phrase id="PermissionListSearchView" value="列表/搜索/查阅" client="1"/><!-- v2018 -->
+    <phrase id="PermissionList" value="列表" client="1"/><!-- v2018 -->
+    <phrase id="PermissionLookup" value="查找" client="1"/><!-- v2020 -->
+    <phrase id="PermissionSearch" value="搜索" client="1"/><!-- v2018 -->
+    <phrase id="PermissionView" value="查阅" client="1"/><!-- v2018 -->
+    <phrase id="PersonalDataBtn" value="个人数据"/><!-- v2019 -->
+    <phrase id="PersonalDataContent" value="您的账户包含了提供给本站的数据。您可以在本页面下载或删除这些数据。"/><!-- v2019 -->
+    <phrase id="PersonalDataDeleteFailure" value="删除用户过程中遇到未知错误"/><!-- v2019 -->
+    <phrase id="PersonalDataDeleteSuccess" value="成功删除个人数据！"/><!-- v2019 -->
+    <phrase id="PersonalDataTitle" value="个人数据"/><!-- v2019 -->
+    <phrase id="PersonalDataWarning" value="删除这些数据将永久清除您的账户，并且将无法复原。"/><!-- v2019 -->
+    <phrase id="PleaseSelect" value="请选择" client="1"/><!-- v12 -->
+    <phrase id="Prev" value="上一个" client="1"/><!-- v12 -->
+    <phrase id="PrimaryKeyUnspecified" value="未指定主键"/>
+    <phrase id="PrinterFriendly" value="打印机友好页面" class="icon-print ew-icon"/><!-- v11 -->
+    <phrase id="PrivacyPolicy" value="隐私权保护政策"/><!-- v2019 -->
+    <phrase id="PrivacyPolicyContent" value="在本页面设置“隐私权保护政策”"/><!-- v2019 -->
+    <phrase id="PushNotificationDefaultTitle" value="新通知"/><!-- v2022 -->
+    <phrase id="PushNotificationFormTitle" value="标题" client="1"/><!-- v2022 -->
+    <phrase id="PushNotificationFormBody" value="内容" client="1"/><!-- v2022 -->
+    <phrase id="PushNotificationFailure" value="无法发送通知 (failure = %f)" client="1"/><!-- v2022 -->
+    <phrase id="PushNotificationSent" value="通知已推送 &lt;br&gt;(成功 = %s, 失败 = %f)" client="1"/><!-- v2022 -->
+    <phrase id="PushNotificationSuccess" value="所有通知已成功推送 (成功 = %s)" client="1"/><!-- v2022 -->
+    <phrase id="QuickSearchAuto" value="自动" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchAutoShort" value="" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchAll" value="所有关键字" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchAllShort" value="所有" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchAny" value="任意关键字" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchAnyShort" value="任意" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchExact" value="精确匹配" client="1"/><!-- v11 -->
+    <phrase id="QuickSearchExactShort" value="精确" client="1"/><!-- v11 -->
+    <phrase id="Recipient" value="收件人" client="1"/><!-- v2021 -->
+    <phrase id="Record" value="记录" client="1"/><!-- v2022 -->
+    <phrase id="RecordChangedByOtherUser" value="数据已被其他用户更改。点击[刷新]可读取最新的数据（但您在表中输入的数据将被丢失），或点击[覆盖]保存您输入的数据。"/>
+    <phrase id="RecordDeleted" value="个记录已删除"/>
+    <phrase id="RecordInserted" value="个记录已插入"/>
+    <phrase id="RecordUpdated" value="个记录已更新"/>
+    <phrase id="RecordsPerPage" value="每页显示记录数量" client="1"/><!-- v2017 -->
+    <phrase id="Register" value="注册" client="1"/><!-- v2020 -->
+    <phrase id="RegisterBtn" value="注册"/>
+    <phrase id="RegisterSuccess" value="注册成功"/>
+    <phrase id="RegisterSuccessActivate" value="注册成功。激活电邮已经发送到您的邮箱，请到邮箱中点击激活链接来激活您的帐号。"/>
+    <phrase id="RegisterPage" value="用户注册"/>
+    <phrase id="RelatedRecordRequired" value="无法添加或更新记录，因外部键值不在主表 '%t' 中"/>
+    <phrase id="RelatedRecordExists" value="无法删除记录，因其相关记录已保存在从表 '%t' 中"/>
+    <phrase id="ReloadBtn" value="刷新" client="1"/><!-- v2017 -->
+    <phrase id="ReloadLink" value="刷新"/>
+    <phrase id="RememberMe" value="记住我"/>
+    <phrase id="Remove" value="删除"/>
+    <phrase id="Replace" value="替换"/>
+    <phrase id="Report" value="报表"/>
+    <phrase id="ResetPwd" value="重置密码"/><!-- v2020 -->
+    <phrase id="ResetPwdMsg" value="重置密码"/><!-- v2020 -->
+    <phrase id="ResendRegisterEmailBtn" value="重新发送注册电邮"/><!-- v12 -->
+    <phrase id="ResendRegisterEmailSuccess" value="用户 '%u' 的注册电邮已重新发送。"/><!-- v12 -->
+    <phrase id="ResendRegisterEmailFailure" value="无法为用户 '%u' 重新发送注册电邮"/><!-- v12 -->
+    <phrase id="Reset" value="重置"/>
+    <phrase id="ResetAllFilter" value="重置所有筛选条件" class="icon-reset-search ew-icon"/><!-- v2020 -->
+    <phrase id="ResetConcurrentUserBtn" value="重置并发用户会话"/><!-- v12 -->
+    <phrase id="ResetConcurrentUserSuccess" value="用户 '%u' 的会话已被重置"/><!-- v12 -->
+    <phrase id="ResetConcurrentUserFailure" value="无法重置用户 '%u'的会话"/><!-- v12 -->
+    <phrase id="ResetLoginRetryBtn" value="重置登入失败次数"/><!-- v12 -->
+    <phrase id="ResetLoginRetrySuccess" value="用户 '%u' 的登入失败次数已被重置"/><!-- v12 -->
+    <phrase id="ResetLoginRetryFailure" value="无法为用户 '%u' 重置登入失败次数"/><!-- v12 -->
+    <phrase id="ResetSearchBtn" value="重置" class="icon-reset-search ew-icon"/><!-- v11 -->
+    <phrase id="ResetSearch" value="重置"/>
+    <phrase id="ResetUserSecretBtn" value="重新发送用户验证码"/><!-- v2022 --><!-- to double check -->
+    <phrase id="ResetUserSecretSuccess" value="用户 '%u' 的验证码已重新发送"/><!-- v2022 -->
+    <phrase id="ResetUserSecretFailure" value="无法为用户 '%u' 重新发送验证码"/><!-- v2022 -->
+    <phrase id="RptAvg" value="平均"/><!-- v2020 -->
+    <phrase id="RptCnt" value="计数"/><!-- v2020 -->
+    <phrase id="RptDtlRec" value="详细记录"/><!-- v2020 -->
+    <phrase id="RptGrandSummary" value="总计"/><!-- v2020 -->
+    <phrase id="RptMax" value="最大值"/><!-- v2020 -->
+    <phrase id="RptMin" value="最小值"/><!-- v2020 -->
+    <phrase id="RptPageSummary" value="本页小计"/><!-- v2020 -->
+    <phrase id="RptSum" value="合计"/><!-- v2020 -->
+    <phrase id="RptSumHead" value="%c: %v 摘要"/><!-- v2020 -->
+    <phrase id="SaveBtn" value="保存" client="1"/><!-- v2018 -->
+    <phrase id="SaveCurrentFilter" value="保存当前筛选条件"/><!-- v12 -->
+    <phrase id="Scan2FAQrCode" value="安装Google Authenticator，用其扫描上方二维码后输入验证码" client="1"/><!-- v2022 -->
+    <phrase id="Search" value="搜索" client="1"/><!-- v2017 -->
+    <phrase id="SearchBtn" value="搜索" client="1"/><!-- v2018 -->
+    <phrase id="SearchLink" value="搜索" class="fa fa-search ew-icon"/><!-- v2019 -->
+    <phrase id="SearchPanel" value="搜索面板"/><!-- v11 -->
+    <phrase id="SecurityCode" value="验证码" client="1"/><!-- v2022 -->
+    <phrase id="SecurityCodeVerified" value="验证码正确，正在跳转……" client="1"/><!-- v2022 -->
+    <phrase id="SelectAll" value="选择所有"/><!-- v2022 -->
+    <phrase id="SelectBtn" value="选择" client="1"/><!-- v2017 -->
+    <phrase id="SendEmailBtn" value="发送"/>
+    <phrase id="SendEmailSuccess" value="电邮成功发送" client="1"/>
+    <phrase id="Sender" value="发送人" client="1"/><!-- v2021 --><!-- to double check -->
+    <phrase id="SendPushNotification" value="发送推送通知" class="fas fa-bell ew-icon" client="1"/><!-- v2022 -->
+    <phrase id="SendPushNotificationBtn" value="发送"/><!-- v2022 -->
+    <phrase id="SendPushNotificationsToAll" value="未选中订阅。向全部人发送推送通知？" client="1"/><!-- v2022 -->
+    <phrase id="SendPwd" value="发送密码" client="1"/><!-- v2020 -->
+    <phrase id="SequenceNumber" value="%s."/>
+    <phrase id="ServerCommunicationError" value="与服务器通讯时发生错误。" client="1"/><!-- v2022 -->
+    <phrase id="ServerError" value="处理请求时发生内部错误。"/><!-- v2021 -->
+    <phrase id="SessionWillExpire" value="本次会话将于 %s秒后终止，请点击“确定”以继续本次会话。" client="1"/><!-- v12 -->
+    <phrase id="SessionExpired" value="本次会已终止。" client="1"/><!-- v12 -->
+    <phrase id="SetPasswordExpiredBtn" value="设置密码有效期"/><!-- v12 -->
+    <phrase id="SetPasswordExpiredSuccess" value="用户 '%u' 的密码已被设置为失效"/><!-- v12 -->
+    <phrase id="SetPasswordExpiredFailure" value="无法将用户 '%u' 的密码设置为失效"/><!-- v12 -->
+    <phrase id="ShowAllBtn" value="显示所有记录" class="icon-reset-search ew-icon"/><!-- v11 -->
+    <phrase id="ShowAll" value="显示所有记录"/><!-- v11 -->
+    <phrase id="SortUp" value="升序" class="fas fa-sort-up" client="1"/><!-- v2022 -->
+    <phrase id="SortDown" value="降序" class="fas fa-sort-down" client="1"/><!-- v2022 -->
+    <phrase id="Subject" value="标题" client="1"/><!-- v2021 -->
+    <phrase id="Success" value="成功" client="1"/><!-- v2020 -->
+    <phrase id="Summary" value="摘要"/><!-- v2020 -->
+    <phrase id="SummaryColon" value=": "/><!-- v2020 -->
+    <phrase id="Table" value="表"/>
+    <phrase id="Tables" value="表格" client="1"/><!-- v2022 -->
+    <phrase id="To" value="至"/>
+    <phrase id="Top" value="Top"/><!-- v2020 --><!-- todo -->
+    <phrase id="Total" value="合计"/>
+    <phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
+    <phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
+    <phrase id="UnauthorizedMasterUserID" value="当前用户 (%c) 无权插入记录。主过滤器: %f"/>
+    <phrase id="UnsupportedBrowser" value="本页面不支持您使用的浏览器。" client="1"/><!-- v2021 -->
+    <phrase id="Update" value="更新"/>
+    <phrase id="UpdateBtn" value="更新" client="1"/><!-- v2017 -->
+    <phrase id="UpdateCancelled" value="更新已取消"/>
+    <phrase id="UpdateFailed" value="更新失败"/>
+    <phrase id="UpdateLink" value="更新" class="fa fa-check ew-icon"/><!-- v2019 -->
+    <phrase id="UpdateSelectedLink" value="更新已选定的记录" class="icon-edit ew-icon"/><!-- v11 -->
+    <phrase id="UpdateSomeRecordsFailed" value="无法更新多个带主键 %k 的记录"/><!-- v2022 --><!-- to double check -->
+    <phrase id="UpdateSuccess" value="更新成功"/>
+    <phrase id="Uploading" value="正在上传……" client="1"/>
+    <phrase id="UploadStart" value="开始" client="1"/>
+    <phrase id="UploadCancel" value="取消" client="1"/>
+    <phrase id="UploadDelete" value="删除" client="1"/>
+    <phrase id="UploadOverwrite" value="覆盖现有文件？" client="1"/>
+    <phrase id="UploadErrMsg1" value="上传的文件大小超出服务器php.ini中upload_max_filesize的限制。"/>
+    <phrase id="UploadErrMsg2" value="上传的文件大小超出本系统MAX_FILE_SIZE所设定的限制。"/>
+    <phrase id="UploadErrMsg3" value="文件未能完整上传"/>
+    <phrase id="UploadErrMsg4" value="没有文件上传"/>
+    <phrase id="UploadErrMsg6" value="缺失临时文件夹"/>
+    <phrase id="UploadErrMsg7" value="未能在磁盘中写入文件"/>
+    <phrase id="UploadErrMsg8" value="文件上传已被一个PHP模块阻止"/>
+    <phrase id="UploadErrMsgPostMaxSize" value="上传的文件大小超出服务器php.ini中post_max_size的限制。"/>
+    <phrase id="UploadErrMsgMaxFileSize" value="文件太大" client="1"/>
+    <phrase id="UploadErrMsgMinFileSize" value="文件太小" client="1"/>
+    <phrase id="UploadErrMsgAcceptFileTypes" value="不允许的文件格式" client="1"/>
+    <phrase id="UploadErrMsgMaxNumberOfFiles" value="文件数量超出限制" client="1"/>
+    <phrase id="UploadErrMsgMaxWidth" value="图像超出宽度限制"/>
+    <phrase id="UploadErrMsgMinWidth" value="图像需指定最小宽度值"/>
+    <phrase id="UploadErrMsgMaxHeight" value="图像超出高度限制"/>
+    <phrase id="UploadErrMsgMinHeight" value="图像需指定最小高度值"/>
+    <phrase id="UploadErrMsgMaxFileLength" value="图像文件名超出字段长度限制" client="1"/>
+    <phrase id="UserAdministrator" value="Administrator" client="1"/><!-- v12 -->
+    <phrase id="UserAnonymous" value="Anonymous" client="1"/><!-- v12 -->
+    <phrase id="UserDefault" value="Default" client="1"/><!-- v12 -->
+    <phrase id="UserEmail" value="电邮"/>
+    <phrase id="UserExists" value="用户已存在"/>
+    <phrase id="UserLevel" value="用户等级： "/>
+    <phrase id="UserLevelAdministratorName" value="等级为-1的用户名等级名称必须为'Administrator'。" client="1"/>
+    <phrase id="UserLevelAnonymousName" value="等级为-2的用户等级名称'Anonymous'" client="1"/><!-- v12 -->
+    <phrase id="UserLevelPermission" value="用户等级权限"/>
+    <phrase id="UserLevelIDInteger" value="用户等级ID必须为整数。" client="1"/>
+    <phrase id="UserLevelDefaultName" value="等级为0的用户等级名称必须为'Default'。" client="1"/>
+    <phrase id="UserLevelIDIncorrect" value="自定义用户等级ID必须大于0。" client="1"/>
+    <phrase id="UserLevelNameIncorrect" value="自定义用户等级名称不可为'Administrator'或'Default'" client="1"/>
+    <phrase id="UserLoggedIn" value="用户'%u'已经登入！"/>
+    <phrase id="UserName" value="用户名" client="1"/><!-- v2021 -->
+    <phrase id="UserNotFound" value="无法找到用户 '%u'"/><!-- v2018 -->
+    <phrase id="UserProfileCorrupted" value="用户信息错误，请登出后重新登入。"/>
+    <phrase id="ValueNotExist" value="值不存在" client="1"/><!-- v11 -->
+    <phrase id="Verify" value="验证" client="1"/><!-- v2022 -->
+    <phrase id="View" value="查阅"/>
+    <phrase id="ViewImageGallery" value="查阅图像"/><!-- v12 -->
+    <phrase id="ViewLink" value="查阅" class="icon-view ew-icon"/><!-- v11 -->
+    <phrase id="ViewPageAddLink" value="添加" class="fas fa-plus ew-icon"/><!-- v2019 -->
+    <phrase id="ViewPageCopyLink" value="复制" class="icon-copy ew-icon"/><!-- v11 -->
+    <phrase id="ViewPageDeleteLink" value="删除" class="fas fa-trash ew-icon"/><!-- v2019 -->
+    <phrase id="ViewPageDetailLink" value=""/>
+    <phrase id="ViewPageEditLink" value="编辑" class="icon-edit ew-icon"/><!-- v11 -->
+    <phrase id="Warning" value="警告" client="1"/><!-- v2020 -->
+    <phrase id="Week" value="周"/><!-- v2020 -->
+    <phrase id="WrongFileType" value="本文件格式不可上传。" client="1"/>
+    <phrase id="Year" value="年"/><!-- v2020 -->
+    <phrase id="=" value="&amp;nbsp;"/><!-- v12 -->
+    <phrase id="EQUAL" value="="/><!-- v12 -->
+    <phrase id="&lt;&gt;" value="&amp;lt;&amp;gt;"/>
+    <phrase id="&lt;" value="&amp;lt;"/>
+    <phrase id="&lt;=" value="&amp;lt;="/>
+    <phrase id="&gt;" value="&amp;gt;"/>
+    <phrase id="&gt;=" value="&amp;gt;="/>
+    <phrase id="LIKE" value="包含"/>
+    <phrase id="NOT LIKE" value="不包含"/><!-- v11 -->
+    <phrase id="STARTS WITH" value="开头字符"/>
+    <phrase id="ENDS WITH" value="结尾字符"/>
+    <phrase id="IS NULL" value="为空"/>
+    <phrase id="IS NOT NULL" value="非空"/>
+    <phrase id="BETWEEN" value="区间"/>
+    <phrase id="AND" value="和"/>
+    <phrase id="OR" value="或"/>
+<!-- Advanced Filter --><!-- v2020 -->
+    <phrase id="Future" value="未来"/>
+    <phrase id="Past" value="过去"/>
+    <phrase id="Last14Days" value="前 14 天"/>
+    <phrase id="Last30Days" value="前 30 天"/>
+    <phrase id="Last7Days" value="前 7 天"/>
+    <phrase id="Next14Days" value="未来 14 天"/>
+    <phrase id="Next30Days" value="未来 30 天"/>
+    <phrase id="Next7Days" value="未来 7 天"/>
+    <phrase id="Today" value="今天"/>
+    <phrase id="Tomorrow" value="明天"/>
+    <phrase id="Yesterday" value="昨天"/>
+    <phrase id="LastMonth" value="上月"/>
+    <phrase id="NextMonth" value="下月"/>
+    <phrase id="ThisMonth" value="本月"/>
+    <phrase id="LastTwoWeeks" value="过去两周"/>
+    <phrase id="LastWeek" value="上周"/>
+    <phrase id="NextTwoWeeks" value="未来两周"/>
+    <phrase id="NextWeek" value="下周"/>
+    <phrase id="ThisWeek" value="本周"/>
+    <phrase id="LastYear" value="去年"/>
+    <phrase id="NextYear" value="明年"/>
+    <phrase id="ThisYear" value="今年"/>
+<!-- Exceptions --><!-- v2021 -->
+    <phrase id="400" value="Bad Request"/>
+    <phrase id="400Desc" value="服务器无法处理该请求，原因：客户端请求的语法错误。"/>
+    <phrase id="401" value="Unauthorized"/>
+    <phrase id="401Desc" value="请求需要有效的用户验证。"/>
+    <phrase id="403" value="Forbidden"/>
+    <phrase id="403Desc" value="所请求的操作已被禁止。"/>
+    <phrase id="404" value="Not Found"/>
+    <phrase id="404Desc" value="无法找到所请求的资源。请验证URI并重试。"/>
+    <phrase id="405" value="Method Not Allowed"/>
+    <phrase id="405Desc" value="目标资源不支持该请求方法。"/>
+    <phrase id="500" value="Internal Server Error"/>
+    <phrase id="500Desc" value="服务器内部错误，无法完成请求。"/>
+    <phrase id="501" value="Not Implemented"/>
+    <phrase id="501Desc" value="服务器不支持请求的功能，无法执行。"/>
+<!-- Select2 --><!-- v2022 -->
+    <phrase id="ErrorLoading" value="无法加载结果。" client="1"/>
+    <phrase id="InputTooLong" value="请删除 %s 个字符" client="1"/>
+    <phrase id="InputTooShort" value="请输入 %s 个或更多的字符" client="1"/>
+    <phrase id="LoadingMore" value="加载更多……" class="spinner-border spinner-border-sm text-primary" client="1"/>
+    <phrase id="MaximumSelected" value="仅可选择 %s 个项目" client="1"/>
+    <phrase id="NoResults" value="无法找到" client="1"/>
+    <phrase id="Searching" value="搜索中……" class="spinner-border spinner-border-sm text-primary" client="1"/>
+    <phrase id="RemoveAllItems" value="移除所有项" client="1"/>
+    <phrase id="RemoveItem" value="移除一项" client="1"/>
 </global>
 </ew-language>
