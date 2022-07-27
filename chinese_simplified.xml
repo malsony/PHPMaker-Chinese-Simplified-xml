@@ -479,7 +479,7 @@
     <phrase id="Table" value="表"/>
     <phrase id="Tables" value="表格" client="1"/><!-- v2022 -->
     <phrase id="To" value="至"/>
-    <phrase id="Top" value="Top"/><!-- v2020 --><!-- todo -->
+    <phrase id="Top" value="跳至顶部"/><!-- v2020 -->
     <phrase id="Total" value="合计"/>
     <phrase id="UnauthorizedUserID" value="当前用户 (%c) 无权指定用户ID (%u)。"/>
     <phrase id="UnauthorizedParentUserID" value="当前用户 (%c) 无权指定父用户ID (%p)。"/>
