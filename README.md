@@ -1,8 +1,8 @@
 # PHPMaker 简体中文语言包
 
 ## 使用方法：
-1. 将`chinese_simplified.xml`文件复制到PHPMaker安装路径的`languages`目录下；
-2. 重新启动PHPMaker，在PHP标签的`Default Language`中选择`简体中文`；
+1. 将`chinese_simplified.xml`文件复制到`C:\Users\【用户名】\AppData\Roaming\PHPMaker2022\languages`目录下；
+2. 重新启动PHPMaker，打开工程文件后，在“Tools”菜单中的“语言”选项启用“中文（简体）”；
 3. 完美！
 
 注：译者水平有限，如有错漏欢迎PR赐教或提Issue，谢谢！
@@ -14,8 +14,8 @@
 # PHPMaker Chinese Simplified xml file
 
 ## Usage:
-1. Copy `chinese_simplified.xml` to the `languages` directory under installation path of PHPMaker;
-2. Restart PHPMaker, then choose `简体中文` in the PHP tab;
+1. Copy `chinese_simplified.xml` to the directory `C:\Users\[USERNAME]\AppData\Roaming\PHPMaker2022\languages`;
+2. Restart PHPMaker, after opening the peoject file, go to "Tools", "Languages", and enable "中文（简体）";
 3. See how your project rocks!
 
 Remarks: feel free to fork this file and submit bug fixing or anything else, thank you!
