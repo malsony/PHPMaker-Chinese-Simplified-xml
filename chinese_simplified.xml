@@ -753,7 +753,7 @@
         <phrase id="allDayText" value="全日"/>
         <phrase id="moreLinkText" value="更多"/>
         <phrase id="noEventsText" value="没有事项显示"/>
-        <phrase id="viewHint" value="$0 查阅/><!-- Do not translate '$0' --><!-- todo -->
+        <phrase id="viewHint" value="$0 查阅"/><!-- Do not translate '$0' --><!-- todo -->
         <phrase id="navLinkHint" value="前往 $0"/><!-- Do not translate '$0' -->
     </fullcalendar>
 </global>
