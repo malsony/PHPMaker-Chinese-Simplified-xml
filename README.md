@@ -15,7 +15,7 @@
 
 ## Usage:
 1. Copy `chinese_simplified.xml` to the directory `C:\Users\[USERNAME]\AppData\Roaming\PHPMaker2023\languages`;
-2. Restart PHPMaker, after opening the peoject file, go to "Tools", "Languages", and enable "中文（简体）";
+2. Restart PHPMaker, after opening the project file, go to "Tools", "Languages", and enable "中文（简体）";
 3. See how your project rocks!
 
 Remarks: feel free to fork this file and submit bug fixing or anything else, thank you!
