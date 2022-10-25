@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ew-language version="19.0.0" id="zh-CN" name="中文（简体）" desc="中文（简体）" author="Alex Lee">
+<ew-language version="19.0.0" id="zh-Hans-CN" name="简体中文（中国大陆）" desc="简体中文（中国大陆）" author="Alex Lee">
 <!--
     IMPORTANT NOTES:
     1. Language ID must be RFC 4646 language tags (which use hyphen, not underscore), e.g. en-US, fr-CA, fr-FR,
